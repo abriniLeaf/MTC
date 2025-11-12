@@ -34,9 +34,13 @@
     }
   },
   "hero": {
-    "title": {
-      "en": "Where Technology Meets Strategy",
-      "ar": "حيث تلتقي التكنولوجيا بالاستراتيجية"
+    "where_tecnology": {
+      "en": "Where Technology ",
+      "ar": "التي"
+    },
+    "meets_strategy": {
+      "en": "Meets Strategy",
+      "ar": "تلتقي بالاستراتيجية"
     },
     "subtitle": {
       "en": "Mindtree",
@@ -99,6 +103,36 @@
       "ar": "أن نكون الرائدين عالمياً في التحول التجاري المدفوع بالتكنولوجيا، وخلق قيمة دائمة لعملائنا وشركائنا."
     }
   },
+  "aboutMTC": {
+    "title": {
+      "en": "About MTC",
+      "ar": "عن MTC"
+    },
+    "description": {
+      "en": "Mindtrue is an end-to-end operations platform built to help businesses and vendors manage outsourced teams efficiently. From task tracking to collaboration, we simplify execution and optimize workflows in one smart system.",
+      "ar": "مايندترو هي منصة عمليات شاملة مصممة لمساعدة الشركات والموردين على إدارة الفرق الخارجية بكفاءة. من تتبع المهام إلى التعاون، نبسط التنفيذ ونحسن سير العمل في نظام ذكي واحد."
+    },
+    "vision": {
+      "title": {
+        "en": "Vision",
+        "ar": "الرؤية"
+      },
+      "description": {
+        "en": "To simplify and improve outsourced workforce operations by delivering scalable, collaborative, and transparent tools to clients and vendors. ",
+        "ar": "تبسيط وتحسين عمليات القوى العاملة الخارجية، مما يمكّن الشركات من إدارة الفرق والتعاون مع شركاء الموارد بشكل أكثر فعالية وكفاءة."
+      }
+    },
+    "mission": {
+      "title": {
+        "en": "Mission",
+        "ar": "المهمة"
+      },
+      "description": {
+        "en": "To build a centralized solution where companies and vendors can align workflows, increase visibility, and ensure seamless project delivery—at scale.",
+        "ar": "بناء منصة مخصصة حيث يكون الاستعانة بمصادر خارجية شفافة وقابلة للتتبع ومحسّنة للنجاح. نربط الشركات والموردين بالأدوات المناسبة لتبسيط العمليات وتحسين التعاون وتحقيق النتائج."
+      }
+    }
+  },
   "contact": {
     "title": {
       "en": "Contact Us",
@@ -139,6 +173,56 @@
     "address": {
       "en": "Address",
       "ar": "العنوان"
+    }
+  },
+  "trustedCompanies": {
+    "trustedBy": {
+      "en": "Trusted by ",
+      "ar": "موثوق به من قبل"
+    },
+    "25_plus": {
+      "en": "25+",
+      "ar": "25+"
+    },
+    "companies": {
+      "en": "Companies Across the Region. Serving industries like IT,\n Consulting, Customer Support, and Fintech.",
+      "ar": " شركات في المنطقة. خدمات الصناعات مثل التكنولوجيا والاستشارات والدعم الفني والتمويل الإلكتروني."
+    },
+    "description": {
+      "en": "Most tools weren't built to manage outsourced teams. Mindtrue fills that gap — giving companies and vendors the tools to work better together.",
+      "ar": "معظم الأدوات لم تُبنَ لإدارة الفرق الخارجية. مايندترو تملأ هذه الفجوة — مما يمنح الشركات والموردين الأدوات للعمل معًا بشكل أفضل."
+    },
+    "features": {
+      "noOversight": {
+        "title": {
+          "en": "No Real-Time Oversight",
+          "ar": "لا إشراف في الوقت الفعلي"
+        },
+        "description": {
+          "en": "Scattered data and delayed updates make it tough to track talent and progress as it happens.",
+          "ar": "البيانات المتفرقة والتحديثات المتأخرة تجعل من الصعب تتبع المواهب والتقدم في الوقت الفعلي."
+        }
+      },
+      "disconnected": {
+        "title": {
+          "en": "Disconnected Systems",
+          "ar": "أنظمة غير متصلة"
+        },
+        "description": {
+          "en": "Without centralized control, key updates get buried in emails and chats, hurting collaboration.",
+          "ar": "بدون سيطرة مركزية، تُدفن التحديثات الرئيسية في رسائل البريد الإلكتروني والمحادثات، مما يضر بالتعاون."
+        }
+      },
+      "inconsistent": {
+        "title": {
+          "en": "Inconsistent Execution",
+          "ar": "تنفيذ غير متسق"
+        },
+        "description": {
+          "en": "Teams rely on different tools and ad-hoc processes, creating gaps in delivery and expectations.",
+          "ar": "تعتمد الفرق على أدوات مختلفة وعمليات مخصصة، مما يخلق فجوات في التسليم والتوقعات."
+        }
+      }
     }
   },
   "footer": {

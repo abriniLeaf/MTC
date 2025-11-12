@@ -32,8 +32,8 @@ const Header: React.FC = () => {
     <header
       className={`fixed top-0 left-1/2 -translate-x-1/2 z-50 ${
         isScrolled
-          ? 'bg-white/80 backdrop-blur-md shadow-md w-[95%] max-w-7xl mt-2 rounded-full'
-          : 'bg-white w-full rounded-xl'
+          ? 'bg-white/80 backdrop-blur-md shadow-md w-[95%] max-w-7xl mt-2 rounded-full '
+          : ' w-full rounded-xl bg-white/40 backdrop-blur-md  '
       }`}
       style={{
         transition: 'background-color 0.5s ease-in-out, box-shadow 0.5s ease-in-out, border-radius 0.5s ease-in-out, width 0.5s ease-in-out, margin-top 0.5s ease-in-out',
