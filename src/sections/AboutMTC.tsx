@@ -1,14 +1,15 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
+import { useLanguage } from '../context/LanguageContext';
 
 const AboutMTC: React.FC = () => {
   const { t } = useTranslation();
-
+  const { isRTL } = useLanguage();
   return (
-    <section className="py-16 bg-primary">
+    <section id="about" className="py-16 bg-primary">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
-        <div className="mb-20 flex justify-between gap-19 align-bottom items-end">
+        <div className="mb-0 md:mb-20 flex md:flex-row flex-col justify-between md:gap-19 gap-5 align-bottom items-end">
             <div>
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
             {t('aboutMTC.title')}
@@ -16,7 +17,7 @@ const AboutMTC: React.FC = () => {
           <p className="text-white/90 text-base md:text-xl leading-relaxed">
             {t('aboutMTC.description')}
           </p></div>
-          <div className="flex justify-end gap-4 mt-8">
+          <div className="flex justify-end gap-4 mt-0 md:mt-8">
           <a
             href="#"
             className="w-10 h-10  hover:bg-white/20 rounded-lg flex items-center justify-center transition-colors duration-300"
@@ -55,7 +56,7 @@ const AboutMTC: React.FC = () => {
   </div>
 
   {/* Vision Card */}
-  <div className="bg-transparent px-0 md:px-8 md:pl-0 md:pr-15">
+  <div className={`${isRTL ? 'md:pl-13 md:pr-1 ' : 'pl-0 md:pl-0 md:pr-15'} bg-transparent  `}>
     <h3 className="text-2xl font-bold text-white mb-3 text-justify">
       {t('aboutMTC.vision.title')}
     </h3>
@@ -72,7 +73,7 @@ const AboutMTC: React.FC = () => {
   </div>
 
   {/* Mission Card */}
-  <div className="bg-transparent pl-0 md:pl-0 md:pr-15">
+  <div className={`${isRTL ? 'md:pl-13 md:pr-1 ' : 'pl-0 md:pl-0 md:pr-15'} bg-transparent  `}>
     <h3 className="text-2xl font-bold text-white mb-3">
       {t('aboutMTC.mission.title')}
     </h3>

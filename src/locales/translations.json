@@ -234,5 +234,429 @@
       "en": "Follow Us",
       "ar": "تابعنا"
     }
+  },
+  "uniqueApproach": {
+    "title": {
+      "en": "Our Unique Approach",
+      "ar": "نهجنا الفريد"
+    },
+    "subtitle": {
+      "en": "Explore the core principles that define MTC's value—driving clarity, efficiency, and performance at every level of your operations.",
+      "ar": "استكشف المبادئ الأساسية التي تحدد قيمة MTC - تحقيق الوضوح والكفاءة والأداء على كل مستوى من عملياتك."
+    },
+    "centralizedVisibility": {
+      "title": {
+        "en": "Centralized Visibility",
+        "ar": "رؤية مركزية"
+      },
+      "description": {
+        "en": "Gain complete oversight of your operations with unified dashboards that bring all critical data into one accessible platform.",
+        "ar": "احصل على إشراف كامل على عملياتك من خلال لوحات معلومات موحدة تجمع جميع البيانات الحيوية في منصة واحدة يسهل الوصول إليها."
+      }
+    },
+    "scalableTalent": {
+      "title": {
+        "en": "Scalable Talent Management",
+        "ar": "إدارة المواهب القابلة للتوسع"
+      },
+      "description": {
+        "en": "Empower your workforce with intelligent tools that adapt to your growth, ensuring seamless talent acquisition and development.",
+        "ar": "قم بتمكين قوتك العاملة بأدوات ذكية تتكيف مع نموك، مما يضمن اكتساب وتطوير المواهب بسلاسة."
+      }
+    },
+    "alignedWorkflows": {
+      "title": {
+        "en": "Aligned Workflows",
+        "ar": "سير عمل متوافق"
+      },
+      "description": {
+        "en": "Synchronize teams and processes with automated workflows that eliminate bottlenecks and drive consistent results.",
+        "ar": "قم بمزامنة الفرق والعمليات من خلال سير عمل آلي يزيل الاختناقات ويحقق نتائج متسقة."
+      }
+    }
+  },
+  "destinations": {
+    "title": {
+      "en": "Explore Destinations",
+      "ar": "استكشف الوجهات"
+    },
+    "subtitle": {
+      "en": "Discover amazing places around the world with our curated travel packages.",
+      "ar": "اكتشف أماكن مذهلة حول العالم مع باقات السفر المنسقة لدينا."
+    },
+    "indonesia": {
+      "location": {
+        "en": "Indonesia",
+        "ar": "إندونيسيا"
+      },
+      "stats": {
+        "en": "1,345 Hotels • 24 Packages",
+        "ar": "1,345 فندق • 24 باقة"
+      }
+    },
+    "dubai": {
+      "location": {
+        "en": "Dubai",
+        "ar": "دبي"
+      },
+      "stats": {
+        "en": "2,345 Hotels • 54 Packages",
+        "ar": "2,345 فندق • 54 باقة"
+      }
+    },
+    "exploreNow": {
+      "en": "Explore Now",
+      "ar": "استكشف الآن"
+    }
+  },
+  "serviceOfferings": {
+    "title": {
+      "en": "Service Offerings",
+      "ar": "عروض الخدمات"
+    },
+    "subtitle": {
+      "en": "Explore our diverse service offerings designed to meet your operational needs with agility and scale.",
+      "ar": "استكشف عروض الخدمات المتنوعة المصممة لتلبية احتياجاتك التشغيلية بخفة الحركة والحجم."
+    },
+    "outsourcingTalent": {
+      "title": {
+        "en": "Outsourcing & Talent Portal",
+        "ar": "الاستعانة بمصادر خارجية وبوابة المواهب"
+      },
+      "description": {
+        "en": "Access a vetted pool of top-tier professionals across roles—from developers to project managers—available for full-time, part-time, or contract-based roles. Whether you're scaling a team or filling a skills gap, our talent portal connects you with the right people.",
+        "ar": "الوصول إلى مجموعة مدققة من المهنيين من الدرجة الأولى عبر الأدوار - من المطورين إلى مديري المشاريع - متاحة للأدوار بدوام كامل أو جزئي أو تعاقدي. سواء كنت تقوم بتوسيع فريق أو ملء فجوة في المهارات، فإن بوابة المواهب لدينا تربطك بالأشخاص المناسبين."
+      },
+      "features": [
+        {
+          "en": "Software Developers",
+          "ar": "مطوري البرمجيات"
+        },
+        {
+          "en": "Project Managers",
+          "ar": "مديري المشاريع"
+        },
+        {
+          "en": "QA Specialists",
+          "ar": "متخصصي ضمان الجودة"
+        },
+        {
+          "en": "Data Analysts",
+          "ar": "محللي البيانات"
+        },
+        {
+          "en": "Designers",
+          "ar": "المصممين"
+        }
+      ]
+    },
+    "tailoredSoftware": {
+      "title": {
+        "en": "Tailored Software Solutions",
+        "ar": "حلول برمجية مخصصة"
+      },
+      "description": {
+        "en": "We develop custom web and mobile applications tailored to your business needs. From sleek front-end interfaces to robust backend architecture, we ensure performance, scalability, and user satisfaction.",
+        "ar": "نطور تطبيقات ويب وجوال مخصصة مصممة خصيصاً لاحتياجات عملك. من واجهات أمامية أنيقة إلى هندسة خلفية قوية، نضمن الأداء وقابلية التوسع ورضا المستخدم."
+      },
+      "features": [
+        {
+          "en": "Custom Web Apps",
+          "ar": "تطبيقات ويب مخصصة"
+        },
+        {
+          "en": "Mobile App Development",
+          "ar": "تطوير تطبيقات الجوال"
+        },
+        {
+          "en": "SaaS Platforms",
+          "ar": "منصات البرمجيات كخدمة"
+        },
+        {
+          "en": "Systems Integration",
+          "ar": "تكامل الأنظمة"
+        }
+      ]
+    },
+    "uiuxDesign": {
+      "title": {
+        "en": "UI/UX Design Services",
+        "ar": "خدمات تصميم واجهة المستخدم وتجربة المستخدم"
+      },
+      "description": {
+        "en": "Create exceptional user experiences with our comprehensive design services. We focus on user-centered design principles to deliver interfaces that are both beautiful and functional.",
+        "ar": "اخلق تجارب مستخدم استثنائية مع خدمات التصميم الشاملة لدينا. نركز على مبادئ التصميم المتمحورة حول المستخدم لتقديم واجهات جميلة وعملية على حد سواء."
+      },
+      "features": [
+        {
+          "en": "User Research & Analysis",
+          "ar": "بحث وتحليل المستخدم"
+        },
+        {
+          "en": "Wireframing & Prototyping",
+          "ar": "الإطار السلكي والنماذج الأولية"
+        },
+        {
+          "en": "Visual Design",
+          "ar": "التصميم البصري"
+        },
+        {
+          "en": "Usability Testing",
+          "ar": "اختبار قابلية الاستخدام"
+        }
+      ]
+    },
+    "qualityAssurance": {
+      "title": {
+        "en": "Quality Assurance System Services",
+        "ar": "خدمات نظام ضمان الجودة"
+      },
+      "description": {
+        "en": "Ensure your software meets the highest standards with our comprehensive QA services. From automated testing to manual validation, we help you deliver bug-free, reliable applications.",
+        "ar": "تأكد من أن برنامجك يلبي أعلى المعايير مع خدمات ضمان الجودة الشاملة لدينا. من الاختبار الآلي إلى التحقق اليدوي، نساعدك في تقديم تطبيقات موثوقة وخالية من الأخطاء."
+      },
+      "features": [
+        {
+          "en": "Automated Testing",
+          "ar": "الاختبار الآلي"
+        },
+        {
+          "en": "Manual Testing",
+          "ar": "الاختبار اليدوي"
+        },
+        {
+          "en": "Performance Testing",
+          "ar": "اختبار الأداء"
+        },
+        {
+          "en": "Security Testing",
+          "ar": "اختبار الأمان"
+        }
+      ]
+    },
+    "businessConsulting": {
+      "title": {
+        "en": "Professional Business Consulting",
+        "ar": "استشارات الأعمال المهنية"
+      },
+      "description": {
+        "en": "Transform your business operations with strategic consulting services. Our experts help you optimize processes, implement digital solutions, and drive sustainable growth.",
+        "ar": "حول عمليات عملك مع خدمات الاستشارات الاستراتيجية. يساعدك خبراؤنا في تحسين العمليات وتنفيذ الحلول الرقمية ودفع النمو المستدام."
+      },
+      "features": [
+        {
+          "en": "Digital Transformation",
+          "ar": "التحول الرقمي"
+        },
+        {
+          "en": "Process Optimization",
+          "ar": "تحسين العمليات"
+        },
+        {
+          "en": "Technology Strategy",
+          "ar": "استراتيجية التكنولوجيا"
+        },
+        {
+          "en": "Change Management",
+          "ar": "إدارة التغيير"
+        }
+      ]
+    }
+  },
+  "designedForAll": {
+    "title": {
+      "en": "Designed for All",
+      "ar": "مصمم للجميع"
+    },
+    "subtitle": {
+      "en": "Mindtrue enables structured collaboration between stakeholders by streamlining task flow, communication, and accountability—from initiation to delivery.",
+      "ar": "تمكّن مايندترو التعاون المنظم بين أصحاب المصلحة من خلال تبسيط تدفق المهام والتواصل والمساءلة - من البداية إلى التسليم."
+    },
+    "vendors": {
+      "title": {
+        "en": "Vendors",
+        "ar": "الموردون"
+      },
+      "heading": {
+        "en": "Step-by-Step for Vendors",
+        "ar": "خطوة بخطوة للموردين"
+      },
+      "steps": [
+        {
+          "title": {
+            "en": "Add Employees or Services",
+            "ar": "إضافة الموظفين أو الخدمات"
+          },
+          "description": {
+            "en": "Register available team members or services for client projects, bids, and availability.",
+            "ar": "سجل أعضاء الفريق المتاحين أو الخدمات لمشاريع العملاء والعطاءات والتوفر."
+          }
+        },
+        {
+          "title": {
+            "en": "Respond to Requests",
+            "ar": "الرد على الطلبات"
+          },
+          "description": {
+            "en": "Accept or decline project invitations that match your expertise.",
+            "ar": "قبول أو رفض دعوات المشاريع التي تتناسب مع خبرتك."
+          }
+        },
+        {
+          "title": {
+            "en": "Manage Assignments",
+            "ar": "إدارة المهام"
+          },
+          "description": {
+            "en": "Assign employees to projects, track their performance.",
+            "ar": "تعيين الموظفين للمشاريع وتتبع أدائهم."
+          }
+        },
+        {
+          "title": {
+            "en": "Collaborate & Update",
+            "ar": "التعاون والتحديث"
+          },
+          "description": {
+            "en": "Use the dashboard to share updates, coordinate tasks, and communicate with clients in real-time.",
+            "ar": "استخدم لوحة المعلومات لمشاركة التحديثات وتنسيق المهام والتواصل مع العملاء في الوقت الفعلي."
+          }
+        },
+        {
+          "title": {
+            "en": "Track Earnings & Contracts",
+            "ar": "تتبع الأرباح والعقود"
+          },
+          "description": {
+            "en": "Monitor payments, contracts, and performance level agreements. All from your dashboard.",
+            "ar": "راقب المدفوعات والعقود واتفاقيات مستوى الأداء. كل ذلك من لوحة المعلومات الخاصة بك."
+          }
+        }
+      ]
+    },
+    "clients": {
+      "title": {
+        "en": "Clients",
+        "ar": "العملاء"
+      },
+      "heading": {
+        "en": "Step-by-Step for Clients",
+        "ar": "خطوة بخطوة للعملاء"
+      },
+      "steps": [
+        {
+          "title": {
+            "en": "Submit Your Request",
+            "ar": "تقديم طلبك"
+          },
+          "description": {
+            "en": "Provide project scope, preferred skills, and timeline.",
+            "ar": "قدم نطاق المشروع والمهارات المفضلة والجدول الزمني."
+          }
+        },
+        {
+          "title": {
+            "en": "Review Vendor Offers",
+            "ar": "مراجعة عروض الموردين"
+          },
+          "description": {
+            "en": "Compare proposals, view vendor profiles, and make your choice.",
+            "ar": "قارن المقترحات واعرض ملفات تعريف الموردين واتخذ قرارك."
+          }
+        },
+        {
+          "title": {
+            "en": "Collaborate with Dashboard",
+            "ar": "التعاون مع لوحة المعلومات"
+          },
+          "description": {
+            "en": "Track progress, assign tasks, provide feedback, and stay aligned with your team.",
+            "ar": "تتبع التقدم وتعيين المهام وتقديم الملاحظات والبقاء متوافقًا مع فريقك."
+          }
+        },
+        {
+          "title": {
+            "en": "Track Milestones & Progress",
+            "ar": "تتبع المعالم والتقدم"
+          },
+          "description": {
+            "en": "Monitor vendor performance and timelines at each stage.",
+            "ar": "راقب أداء المورد والجداول الزمنية في كل مرحلة."
+          }
+        },
+        {
+          "title": {
+            "en": "Evaluate & Improve",
+            "ar": "التقييم والتحسين"
+          },
+          "description": {
+            "en": "Rate vendors and access performance data to inform future projects.",
+            "ar": "قيّم الموردين واحصل على بيانات الأداء لتوجيه المشاريع المستقبلية."
+          }
+        }
+      ]
+    },
+    "employees": {
+      "title": {
+        "en": "Employees",
+        "ar": "الموظفون"
+      },
+      "heading": {
+        "en": "Step-by-Step for Employees",
+        "ar": "خطوة بخطوة للموظفين"
+      },
+      "steps": [
+        {
+          "title": {
+            "en": "Get Assigned to a Project",
+            "ar": "الحصول على مهمة في مشروع"
+          },
+          "description": {
+            "en": "You're invited by your vendor company to join a specific client project.",
+            "ar": "يتم دعوتك من قبل شركة المورد الخاصة بك للانضمام إلى مشروع عميل محدد."
+          }
+        },
+        {
+          "title": {
+            "en": "Access Your Workspace",
+            "ar": "الوصول إلى مساحة العمل الخاصة بك"
+          },
+          "description": {
+            "en": "Log in to view tasks, timelines, and project briefs — everything in one place.",
+            "ar": "سجل الدخول لعرض المهام والجداول الزمنية وملخصات المشروع - كل شيء في مكان واحد."
+          }
+        },
+        {
+          "title": {
+            "en": "Collaborate with Teams",
+            "ar": "التعاون مع الفرق"
+          },
+          "description": {
+            "en": "Communicate with clients, vendors, and teammates to ensure smooth execution.",
+            "ar": "تواصل مع العملاء والموردين وأعضاء الفريق لضمان التنفيذ السلس."
+          }
+        },
+        {
+          "title": {
+            "en": "Submit Work & Track Progress",
+            "ar": "تقديم العمل وتتبع التقدم"
+          },
+          "description": {
+            "en": "Upload deliverables, update status, and monitor task completion in real-time.",
+            "ar": "قم بتحميل التسليمات وتحديث الحالة ومراقبة إنجاز المهام في الوقت الفعلي."
+          }
+        },
+        {
+          "title": {
+            "en": "Receive Feedback & Build Reputation",
+            "ar": "تلقي الملاحظات وبناء السمعة"
+          },
+          "description": {
+            "en": "Get performance ratings, improve over time, and boost your visibility for future opportunities.",
+            "ar": "احصل على تقييمات الأداء وتحسن بمرور الوقت وعزز ظهورك للفرص المستقبلية."
+          }
+        }
+      ]
+    }
   }
 }

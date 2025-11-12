@@ -2,10 +2,14 @@ import Header from './components/Header'
 import Footer from './components/Footer'
 import Hero from './sections/Hero'
 import TrustedCompanies from './sections/TrustedCompanies'
-import About from './sections/About'
+
 import AboutMTC from './sections/AboutMTC'
 import Services from './sections/Services'
 import Contact from './sections/Contact'
+import UniqueApproach from './sections/UniqueApproach'
+import ServiceOfferings from './sections/ServiceOfferings'
+import DesignedForAll from './sections/DesignedForAll'
+// import DestinationDemo from './sections/DestinationDemo'
 
 function App() {
   return (
@@ -15,8 +19,12 @@ function App() {
         <Hero />
         <TrustedCompanies />
         <AboutMTC />
+
+        <UniqueApproach />
+        <DesignedForAll />
+        <ServiceOfferings />
         <Services />
-        <About />
+        {/* <DestinationDemo /> */}
         <Contact />
       </main>
       <Footer />
