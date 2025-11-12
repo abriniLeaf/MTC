@@ -1,0 +1,154 @@
+{
+  "nav": {
+    "home": {
+      "en": "Home",
+      "ar": "الرئيسية"
+    },
+    "services": {
+      "en": "Service Offerings",
+      "ar": "عروض الخدمات"
+    },
+    "plans": {
+      "en": "Our Plans",
+      "ar": "خططنا"
+    },
+    "about": {
+      "en": "About MTC",
+      "ar": "عن MTC"
+    },
+    "contact": {
+      "en": "Contact Us",
+      "ar": "اتصل بنا"
+    },
+    "applyClient": {
+      "en": "Apply as a Client",
+      "ar": "التقديم كعميل"
+    },
+    "applyVendor": {
+      "en": "Apply as a Vendor",
+      "ar": "التقديم كمورد"
+    },
+    "search": {
+      "en": "Search",
+      "ar": "بحث"
+    }
+  },
+  "hero": {
+    "title": {
+      "en": "Where Technology Meets Strategy",
+      "ar": "حيث تلتقي التكنولوجيا بالاستراتيجية"
+    },
+    "subtitle": {
+      "en": "Mindtree",
+      "ar": "مايندتري"
+    },
+    "description": {
+      "en": "is an innovation-driven platform that helps companies streamline operations, connect with trusted resource partners, and manage outsourced teams—all in one place.",
+      "ar": "هي منصة مدفوعة بالابتكار تساعد الشركات على تبسيط العمليات والتواصل مع شركاء الموارد الموثوقين وإدارة الفرق الخارجية - كل ذلك في مكان واحد."
+    }
+  },
+  "services": {
+    "title": {
+      "en": "Our Services",
+      "ar": "خدماتنا"
+    },
+    "outsourcing": {
+      "en": "Outsourcing & Talent Portal",
+      "ar": "الاستعانة بمصادر خارجية وبوابة المواهب"
+    },
+    "uiux": {
+      "en": "UI/UX Design Services",
+      "ar": "خدمات تصميم واجهة المستخدم وتجربة المستخدم"
+    },
+    "software": {
+      "en": "Tailored Software Solutions",
+      "ar": "حلول برمجية مخصصة"
+    },
+    "quality": {
+      "en": "Quality Assurance System Services",
+      "ar": "خدمات نظام ضمان الجودة"
+    },
+    "consulting": {
+      "en": "Professional Business Consulting",
+      "ar": "استشارات الأعمال المهنية"
+    }
+  },
+  "about": {
+    "title": {
+      "en": "About MTC",
+      "ar": "عن MTC"
+    },
+    "description": {
+      "en": "MTC (Mindtree Technologies) is a leading technology solutions provider that bridges the gap between innovation and business strategy. We specialize in delivering comprehensive digital transformation services, from talent acquisition to custom software development.",
+      "ar": "MTC (مايندتري تكنولوجيز) هي مزود رائد لحلول التكنولوجيا يربط بين الابتكار واستراتيجية الأعمال. نحن متخصصون في تقديم خدمات التحول الرقمي الشاملة، من اكتساب المواهب إلى تطوير البرمجيات المخصصة."
+    },
+    "mission": {
+      "en": "Our Mission",
+      "ar": "مهمتنا"
+    },
+    "missionText": {
+      "en": "To empower businesses with cutting-edge technology solutions that drive growth, efficiency, and innovation.",
+      "ar": "تمكين الشركات بحلول تكنولوجية متطورة تدفع النمو والكفاءة والابتكار."
+    },
+    "vision": {
+      "en": "Our Vision",
+      "ar": "رؤيتنا"
+    },
+    "visionText": {
+      "en": "To be the global leader in technology-driven business transformation, creating lasting value for our clients and partners.",
+      "ar": "أن نكون الرائدين عالمياً في التحول التجاري المدفوع بالتكنولوجيا، وخلق قيمة دائمة لعملائنا وشركائنا."
+    }
+  },
+  "contact": {
+    "title": {
+      "en": "Contact Us",
+      "ar": "اتصل بنا"
+    },
+    "subtitle": {
+      "en": "Get in touch with our team",
+      "ar": "تواصل مع فريقنا"
+    },
+    "name": {
+      "en": "Your Name",
+      "ar": "اسمك"
+    },
+    "email": {
+      "en": "Your Email",
+      "ar": "بريدك الإلكتروني"
+    },
+    "message": {
+      "en": "Your Message",
+      "ar": "رسالتك"
+    },
+    "send": {
+      "en": "Send Message",
+      "ar": "إرسال الرسالة"
+    },
+    "info": {
+      "en": "Contact Information",
+      "ar": "معلومات الاتصال"
+    },
+    "phone": {
+      "en": "Phone",
+      "ar": "الهاتف"
+    },
+    "emailLabel": {
+      "en": "Email",
+      "ar": "البريد الإلكتروني"
+    },
+    "address": {
+      "en": "Address",
+      "ar": "العنوان"
+    }
+  },
+  "footer": {
+    "rights": {
+      "en": "All rights reserved.",
+      "ar": "جميع الحقوق محفوظة."
+    },
+    "followUs": {
+      "en": "Follow Us",
+      "ar": "تابعنا"
+    }
+  }
+}
