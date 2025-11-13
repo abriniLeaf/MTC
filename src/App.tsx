@@ -4,11 +4,12 @@ import Hero from './sections/Hero'
 import TrustedCompanies from './sections/TrustedCompanies'
 
 import AboutMTC from './sections/AboutMTC'
-import Services from './sections/Services'
+// import Services from './sections/Services'
 import Contact from './sections/Contact'
 import UniqueApproach from './sections/UniqueApproach'
 import ServiceOfferings from './sections/ServiceOfferings'
 import DesignedForAll from './sections/DesignedForAll'
+import WhyChooseOurPlatform from './sections/WhyChooseOurPlatform'
 // import DestinationDemo from './sections/DestinationDemo'
 
 function App() {
@@ -23,7 +24,8 @@ function App() {
         <UniqueApproach />
         <DesignedForAll />
         <ServiceOfferings />
-        <Services />
+        <WhyChooseOurPlatform />
+        {/* <Services /> */}
         {/* <DestinationDemo /> */}
         <Contact />
       </main>

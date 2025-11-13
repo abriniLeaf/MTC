@@ -658,5 +658,77 @@
         }
       ]
     }
+  },
+  "whyChooseOurPlatform": {
+    "title": {
+      "en": "Why Choose Our Platform",
+      "ar": "لماذا تختار منصتنا"
+    },
+    "subtitle": {
+      "en": "We deliver measurable value through technology, talent, and tools — enabling teams to work smarter, scale faster, and drive real business outcomes.",
+      "ar": "نحن نقدم قيمة قابلة للقياس من خلال التكنولوجيا والمواهب والأدوات - مما يمكن الفرق من العمل بذكاء أكبر والتوسع بشكل أسرع وتحقيق نتائج تجارية حقيقية."
+    },
+    "features": {
+      "realTimeMonitoring": {
+        "title": {
+          "en": "Real-Time Progress Monitoring",
+          "ar": "مراقبة التقدم في الوقت الفعلي"
+        },
+        "description": {
+          "en": "Clients gain instant visibility into the status and progress of their tasks.",
+          "ar": "يحصل العملاء على رؤية فورية لحالة وتقدم مهامهم."
+        }
+      },
+      "centralizedPlatform": {
+        "title": {
+          "en": "Centralized Platform",
+          "ar": "منصة مركزية"
+        },
+        "description": {
+          "en": "All tools, resources, and communications are consolidated into a single, accessible platform.",
+          "ar": "جميع الأدوات والموارد والاتصالات مدمجة في منصة واحدة يمكن الوصول إليها."
+        }
+      },
+      "performanceEvaluation": {
+        "title": {
+          "en": "Employees Performance Evaluation",
+          "ar": "تقييم أداء الموظفين"
+        },
+        "description": {
+          "en": "Clients can gain instant feedback on employees performance to improve service quality.",
+          "ar": "يمكن للعملاء الحصول على ملاحظات فورية حول أداء الموظفين لتحسين جودة الخدمة."
+        }
+      },
+      "smartEscalation": {
+        "title": {
+          "en": "Smart Escalation Feature",
+          "ar": "ميزة التصعيد الذكي"
+        },
+        "description": {
+          "en": "A simple and user-friendly way to escalate issues related to employees performance or commitment, ensuring timely issue resolution.",
+          "ar": "طريقة بسيطة وسهلة الاستخدام لتصعيد القضايا المتعلقة بأداء الموظفين أو التزامهم، مما يضمن حل المشاكل في الوقت المناسب."
+        }
+      },
+      "comprehensiveOversight": {
+        "title": {
+          "en": "Comprehensive Daily Oversight",
+          "ar": "إشراف يومي شامل"
+        },
+        "description": {
+          "en": "Our platform team monitors all activities daily for every client, ensuring smooth operations and high efficiency to achieve the best outcomes.",
+          "ar": "يراقب فريق منصتنا جميع الأنشطة يومياً لكل عميل، مما يضمن سير العمليات بسلاسة وكفاءة عالية لتحقيق أفضل النتائج."
+        }
+      },
+      "qualityControl": {
+        "title": {
+          "en": "On-Demand Quality Control",
+          "ar": "مراقبة الجودة عند الطلب"
+        },
+        "description": {
+          "en": "The company delivers expert quality audits on task deliverables through a dedicated professional quality assurance team, ensuring consistent and reliable outcomes.",
+          "ar": "تقدم الشركة عمليات تدقيق جودة خبيرة على مخرجات المهام من خلال فريق ضمان جودة مهني مخصص، مما يضمن نتائج متسقة وموثوقة."
+        }
+      }
+    }
   }
 }

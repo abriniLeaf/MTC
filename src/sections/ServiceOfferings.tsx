@@ -7,6 +7,7 @@ import softwareImg from '../assets/solo_talk.png';
 import uiuxImg from '../assets/sitting-and-reading_char.png';
 import qaImg from '../assets/beautiful-city-view 1.png';
 import consultingImg from '../assets/centralizedVisibility.png';
+import { ApproachCard } from "@/components/ui/unique-approach";
 
 const ServiceOfferings = () => {
   const { language } = useLanguage();
@@ -56,7 +57,7 @@ const ServiceOfferings = () => {
   ];
 
   return (
-    <section className="py-20 px-4 md:px-8 lg:px-16 bg-gray-50">
+    <section  id="services" className="py-20 px-4 md:px-8 lg:px-16 bg-gray-50">
       <div className="max-w-7xl mx-auto">
         {/* Section Header */}
         <div className="text-center mb-16">
@@ -69,7 +70,7 @@ const ServiceOfferings = () => {
         </div>
 
         {/* Services List */}
-        <div className="space-y-20">
+        <div className="space-y-10">
           {services.map((service, index) => {
             // Determine layout based on index and language
             const isEvenIndex = index % 2 === 0;
@@ -78,13 +79,13 @@ const ServiceOfferings = () => {
             return (
               <div
                 key={service.id}
-                className={`bg-white rounded-3xl shadow-lg overflow-hidden ${
-                  index % 2 === 0 ? '' : 'bg-gradient-to-r from-blue-50 to-white'
+                className={`bg-white rounded-3xl overflow-hidden ${
+                  index % 2 === 0 ? '' : ''
                 }`}
               >
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-0">
+                <div className="grid grid-cols-1 lg:grid-cols-3 gap-0">
                   {/* Text Content */}
-                  <div className={`p-8 md:p-12 lg:p-16 flex flex-col justify-center ${
+                  <div className={`p-2 flex flex-col justify-center lg:col-span-2 ${
                     textOnLeft ? 'lg:order-1' : 'lg:order-2'
                   }`}>
                     <h3 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
@@ -109,22 +110,34 @@ const ServiceOfferings = () => {
                   </div>
 
                   {/* Image */}
-                  <div className={`relative bg-gradient-to-br from-blue-100 to-blue-200 ${
-                    textOnLeft ? 'lg:order-2' : 'lg:order-1'
-                  }`}>
-                    <div className="absolute inset-0 flex items-center justify-center p-8">
-                      <img
-                        src={service.image}
-                        alt={service.imageAlt}
-                        className="w-full h-full max-w-md max-h-96 object-contain drop-shadow-2xl"
-                        onError={(e) => {
-                          // Fallback to a placeholder if image doesn't exist
-                          const target = e.target as HTMLImageElement;
-                          target.src = `https://via.placeholder.com/400x300/3B82F6/FFFFFF?text=${encodeURIComponent(service.title)}`;
-                        }}
-                      />
-                    </div>
-                  </div>
+                  <div
+  className={`relative lg:col-span-1 ${
+    textOnLeft ? 'lg:order-2' : 'lg:order-1'
+  } flex items-center justify-center`}
+>
+  <div className="flex items-center justify-center">
+  <div className="h-[500px] w-[350px]">
+            <ApproachCard
+              imageUrl={service.image}
+              title={''}
+              description={''}
+              themeColor=""
+            />
+          </div>
+    {/* <img
+      src={service.image}
+      alt={service.imageAlt}
+      className="w-[180px] h-[180px] md:w-[220px] md:h-[220px] object-contain drop-shadow-2xl rounded-xl"
+      onError={(e) => {
+        const target = e.target as HTMLImageElement;
+        target.src = `https://via.placeholder.com/400x300/3B82F6/FFFFFF?text=${encodeURIComponent(
+          service.title
+        )}`;
+      }}
+    /> */}
+  </div>
+</div>
+
                 </div>
               </div>
             );

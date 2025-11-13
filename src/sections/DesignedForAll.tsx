@@ -110,7 +110,7 @@ const DesignedForAll = () => {
           <div className="w-full bg-white rounded-3xl border-2 border-gray-200 overflow-hidden animate-fadeIn">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-0">
               {/* Left Side - Steps */}
-              <div className={`p-8 md:p-8 ml-7 ${language === 'ar' ? 'lg:order-2' : ''}`}>
+              <div className={`p-8 md:p-8 ml-2 ${language === 'ar' ? 'lg:order-2' : ''}`}>
                 <h3 className="text-3xl font-bold text-gray-900 mb-8">
                   {selectedData.heading}
                 </h3>
