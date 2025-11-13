@@ -4,6 +4,7 @@ import { Link } from 'react-scroll';
 import LanguageSwitcher from './LanguageSwitcher';
 import { useLanguage } from '../context/LanguageContext';
 import MTCLogo from '../assets/MTC_logo.png';
+import { navigationItems } from '@/config/navigation';
 
 const Header: React.FC = () => {
   const { t } = useTranslation();
@@ -20,13 +21,6 @@ const Header: React.FC = () => {
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
-
-  const navItems = [
-    { key: 'home', to: 'hero' },
-    { key: 'services', to: 'services' },
-    { key: 'about', to: 'about' },
-    { key: 'contact', to: 'contact' },
-  ];
 
   return (
     <header
@@ -65,7 +59,7 @@ const Header: React.FC = () => {
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center gap-8">
-            {navItems.map((item) => (
+            {navigationItems.map((item) => (
               <Link
                 key={item.key}
                 to={item.to}
@@ -76,7 +70,7 @@ const Header: React.FC = () => {
                 className="text-gray-700 hover:text-primary-800 cursor-pointer transition-colors duration-200 font-medium"
                 activeClass="!text-primary-800 font-semibold"
               >
-                {t(`nav.${item.key}`)}
+                {t(item.translationKey)}
               </Link>
             ))}
           </nav>
@@ -203,7 +197,7 @@ const Header: React.FC = () => {
         {isMobileMenuOpen && (
           <div className="md:hidden py-4 border-t border-gray-200">
             <nav className="flex flex-col gap-4">
-              {navItems.map((item) => (
+              {navigationItems.map((item) => (
                 <Link
                   key={item.key}
                   to={item.to}
@@ -215,7 +209,7 @@ const Header: React.FC = () => {
                   activeClass="!text-primary-800 font-semibold"
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
-                  {t(`nav.${item.key}`)}
+                  {t(item.translationKey)}
                 </Link>
               ))}
               <div className="flex flex-col gap-3 pt-4 border-t border-gray-200">

@@ -10,6 +10,7 @@ import UniqueApproach from './sections/UniqueApproach'
 import ServiceOfferings from './sections/ServiceOfferings'
 import DesignedForAll from './sections/DesignedForAll'
 import WhyChooseOurPlatform from './sections/WhyChooseOurPlatform'
+import OurPlans from './sections/OurPlans'
 // import DestinationDemo from './sections/DestinationDemo'
 
 function App() {
@@ -27,7 +28,8 @@ function App() {
         <WhyChooseOurPlatform />
         {/* <Services /> */}
         {/* <DestinationDemo /> */}
-        <Contact />
+        {/* <Contact /> */}
+        <OurPlans/>
       </main>
       <Footer />
     </div>

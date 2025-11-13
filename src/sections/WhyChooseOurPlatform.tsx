@@ -1,5 +1,6 @@
 import { useLanguage } from "@/context/LanguageContext";
 import translations from "@/locales/translations.json";
+import whyChooseUpImage from "@/assets/whychooseup.svg";
 
 const WhyChooseOurPlatform = () => {
   const { language } = useLanguage();
@@ -145,6 +146,30 @@ const WhyChooseOurPlatform = () => {
               </p>
             </div>
           ))}
+        </div>
+      </div>
+
+      {/* Get Started Section */}
+      <div className="max-w-7xl mx-auto mt-20">
+        <div className="bg-primary rounded-3xl p-12 md:p-16 flex flex-col md:flex-row items-center justify-between gap-8">
+          {/* Left Content */}
+          <div className="flex-1 text-white">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4 leading-tight">
+              {t.getStarted.title[language as 'en' | 'ar']}
+            </h2>
+            <p className="text-lg text-gray-300 leading-relaxed">
+              {t.getStarted.description[language as 'en' | 'ar']}
+            </p>
+          </div>
+
+          {/* Right Image */}
+          <div className="flex-1 flex justify-center md:justify-end">
+            <img
+              src={whyChooseUpImage}
+              alt="Get Started Illustration"
+              className="w-full max-w-md h-auto"
+            />
+          </div>
         </div>
       </div>
     </section>

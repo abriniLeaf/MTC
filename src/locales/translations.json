@@ -226,6 +226,58 @@
     }
   },
   "footer": {
+    "description": {
+      "en": "MTC Platform – Empowering clients, vendors, and teams through unified digital operations.",
+      "ar": "منصة MTC - تمكين العملاء والموردين والفرق من خلال العمليات الرقمية الموحدة."
+    },
+    "phone": {
+      "en": "0014 373 187 800",
+      "ar": "0014 373 187 800"
+    },
+    "email": {
+      "en": "info@mindtruetech",
+      "ar": "info@mindtruetech"
+    },
+    "viewOnMaps": {
+      "en": "View on Google Maps",
+      "ar": "عرض على خرائط جوجل"
+    },
+    "home": {
+      "en": "Home",
+      "ar": "الرئيسية"
+    },
+    "serviceOfferings": {
+      "en": "Service Offwerings",
+      "ar": "عروض الخدمات"
+    },
+    "ourPlans": {
+      "en": "Our Plans",
+      "ar": "خططنا"
+    },
+    "aboutMTC": {
+      "en": "About MTC",
+      "ar": "عن MTC"
+    },
+    "contactUs": {
+      "en": "Contact Us",
+      "ar": "اتصل بنا"
+    },
+    "cookies": {
+      "en": "Cookies",
+      "ar": "ملفات تعريف الارتباط"
+    },
+    "privacy": {
+      "en": "Privacy",
+      "ar": "الخصوصية"
+    },
+    "terms": {
+      "en": "Terms",
+      "ar": "الشروط"
+    },
+    "copyright": {
+      "en": "MTC | All Rights Reserved.",
+      "ar": "MTC | جميع الحقوق محفوظة."
+    },
     "rights": {
       "en": "All rights reserved.",
       "ar": "جميع الحقوق محفوظة."
@@ -659,6 +711,171 @@
       ]
     }
   },
+  "ourPlans": {
+    "title": {
+      "en": "Our Plans",
+      "ar": "خططنا"
+    },
+    "subtitle": {
+      "en": "Whether you're starting small or scaling up, choose from flexible plans designed to support your goals—streamlined, collaborative, and results-driven.",
+      "ar": "سواء كنت تبدأ صغيرًا أو تتوسع، اختر من بين الخطط المرنة المصممة لدعم أهدافك - مبسطة وتعاونية وموجهة نحو النتائج."
+    },
+    "plans": [
+      {
+        "id": "starter",
+        "title": {
+          "en": "Starter",
+          "ar": "المبتدئ"
+        },
+        "description": {
+          "en": "Ideal for quick tasks or pilot engagements",
+          "ar": "مثالي للمهام السريعة أو التجارب التجريبية"
+        },
+        "features": [
+          {
+            "en": "1-2 assigned team members",
+            "ar": "1-2 أعضاء فريق معينين"
+          },
+          {
+            "en": "Email support",
+            "ar": "دعم البريد الإلكتروني"
+          },
+          {
+            "en": "Estimated 1-week delivery",
+            "ar": "التسليم المقدر في أسبوع واحد"
+          }
+        ],
+        "button": {
+          "en": "Select",
+          "ar": "اختر"
+        }
+      },
+      {
+        "id": "professional",
+        "title": {
+          "en": "Professional",
+          "ar": "المحترف"
+        },
+        "description": {
+          "en": "Best suited for ongoing mid-size projects",
+          "ar": "الأنسب للمشاريع المتوسطة الحجم المستمرة"
+        },
+        "features": [
+          {
+            "en": "Up to 5 team members",
+            "ar": "ما يصل إلى 5 أعضاء فريق"
+          },
+          {
+            "en": "Access to a shared workspace",
+            "ar": "الوصول إلى مساحة عمل مشتركة"
+          },
+          {
+            "en": "Project progress tracking",
+            "ar": "تتبع تقدم المشروع"
+          }
+        ],
+        "button": {
+          "en": "Select",
+          "ar": "اختر"
+        }
+      },
+      {
+        "id": "professional",
+        "title": {
+          "en": "Professional",
+          "ar": "المحترف"
+        },
+        "description": {
+          "en": "Best suited for ongoing mid-size projects",
+          "ar": "الأنسب للمشاريع المتوسطة الحجم المستمرة"
+        },
+        "features": [
+          {
+            "en": "Up to 5 team members",
+            "ar": "ما يصل إلى 5 أعضاء فريق"
+          },
+          {
+            "en": "Access to a shared workspace",
+            "ar": "الوصول إلى مساحة عمل مشتركة"
+          },
+          {
+            "en": "Project progress tracking",
+            "ar": "تتبع تقدم المشروع"
+          }
+        ],
+        "button": {
+          "en": "Select",
+          "ar": "اختر"
+        }
+      },
+      {
+        "id": "enterprise",
+        "title": {
+          "en": "Enterprise",
+          "ar": "المؤسسة"
+        },
+        "description": {
+          "en": "For high-scale or custom enterprise needs",
+          "ar": "للاحتياجات المؤسسية الكبيرة أو المخصصة"
+        },
+        "features": [
+          {
+            "en": "Dedicated team",
+            "ar": "فريق مخصص"
+          },
+          {
+            "en": "Daily status updates",
+            "ar": "تحديثات الحالة اليومية"
+          },
+          {
+            "en": "SLA & performance reporting",
+            "ar": "تقارير اتفاقية مستوى الخدمة والأداء"
+          },
+          {
+            "en": "Strategic account manager",
+            "ar": "مدير حساب استراتيجي"
+          }
+        ],
+        "button": {
+          "en": "Select",
+          "ar": "اختر"
+        }
+      },
+      {
+        "id": "enterprise",
+        "title": {
+          "en": "Enterprise",
+          "ar": "المؤسسة"
+        },
+        "description": {
+          "en": "For high-scale or custom enterprise needs",
+          "ar": "للاحتياجات المؤسسية الكبيرة أو المخصصة"
+        },
+        "features": [
+          {
+            "en": "Dedicated team",
+            "ar": "فريق مخصص"
+          },
+          {
+            "en": "Daily status updates",
+            "ar": "تحديثات الحالة اليومية"
+          },
+          {
+            "en": "SLA & performance reporting",
+            "ar": "تقارير اتفاقية مستوى الخدمة والأداء"
+          },
+          {
+            "en": "Strategic account manager",
+            "ar": "مدير حساب استراتيجي"
+          }
+        ],
+        "button": {
+          "en": "Select",
+          "ar": "اختر"
+        }
+      }
+    ]
+  },
   "whyChooseOurPlatform": {
     "title": {
       "en": "Why Choose Our Platform",
@@ -728,6 +945,16 @@
           "en": "The company delivers expert quality audits on task deliverables through a dedicated professional quality assurance team, ensuring consistent and reliable outcomes.",
           "ar": "تقدم الشركة عمليات تدقيق جودة خبيرة على مخرجات المهام من خلال فريق ضمان جودة مهني مخصص، مما يضمن نتائج متسقة وموثوقة."
         }
+      }
+    },
+    "getStarted": {
+      "title": {
+        "en": "Get Started With the Right Services for You",
+        "ar": "ابدأ مع الخدمات المناسبة لك"
+      },
+      "description": {
+        "en": "Choose the resources you need and let our team match you with the right talent and packages.",
+        "ar": "اختر الموارد التي تحتاجها ودع فريقنا يطابقك مع المواهب والباقات المناسبة."
       }
     }
   }
