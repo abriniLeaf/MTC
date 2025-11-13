@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Link } from 'react-scroll';
+import { useNavigate, useLocation } from 'react-router-dom';
 import LanguageSwitcher from './LanguageSwitcher';
 import { useLanguage } from '../context/LanguageContext';
 import MTCLogo from '../assets/MTC_logo.png';
@@ -10,6 +11,9 @@ import ContactModal from './ContactModal';
 const Header: React.FC = () => {
   const { t } = useTranslation();
   const { isRTL } = useLanguage();
+  const navigate = useNavigate();
+  const location = useLocation();
+  const isLegalPage = ['/cookies', '/privacy', '/terms'].includes(location.pathname);
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isSearchOpen, setIsSearchOpen] = useState(false);
@@ -23,6 +27,13 @@ const Header: React.FC = () => {
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
+
+  const handleNavClick = (sectionId: string) => {
+    if (isLegalPage) {
+      // Navigate to home page with hash
+      navigate('/', { state: { scrollTo: sectionId } });
+    }
+  };
 
   return (
     <header
@@ -51,10 +62,6 @@ const Header: React.FC = () => {
                   alt="MTC Logo"
                   className="w-22 h-22 object-contain"
                 />
-                {/* <div className={`${isRTL ? 'text-right' : 'text-left'}`}>
-                  <h1 className="text-xl font-bold text-gray-900">MTC</h1>
-                  <p className="text-xs text-gray-600">Mindtree Technologies</p>
-                </div> */}
               </div>
             </Link>
           </div>
@@ -80,6 +87,7 @@ const Header: React.FC = () => {
                   offset={-80}
                   className="text-gray-700 hover:text-primary-800 cursor-pointer transition-colors duration-200 font-medium"
                   activeClass="!text-primary-800 font-semibold"
+                  onClick={() => handleNavClick(item.to)}
                 >
                   {t(item.translationKey)}
                 </Link>
@@ -231,7 +239,10 @@ const Header: React.FC = () => {
                     offset={-80}
                     className="text-gray-700 hover:text-primary-800 cursor-pointer transition-colors duration-200 font-medium py-2"
                     activeClass="!text-primary-800 font-semibold"
-                    onClick={() => setIsMobileMenuOpen(false)}
+                    onClick={() => {
+                      handleNavClick(item.to);
+                      setIsMobileMenuOpen(false);
+                    }}
                   >
                     {t(item.translationKey)}
                   </Link>

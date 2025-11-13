@@ -1,3 +1,5 @@
+import { useEffect } from 'react'
+import { useLocation } from 'react-router-dom'
 import Header from './components/Header'
 import Footer from './components/Footer'
 import Hero from './sections/Hero'
@@ -14,6 +16,28 @@ import OurPlans from './sections/OurPlans'
 // import DestinationDemo from './sections/DestinationDemo'
 
 function App() {
+  const location = useLocation();
+
+  useEffect(() => {
+    // Check if there's a scrollTo state from navigation
+    if (location.state?.scrollTo) {
+      // Small delay to ensure the page is fully rendered
+      setTimeout(() => {
+        const element = document.getElementById(location.state.scrollTo);
+        if (element) {
+          const offset = -80;
+          const elementPosition = element.getBoundingClientRect().top;
+          const offsetPosition = elementPosition + window.pageYOffset + offset;
+
+          window.scrollTo({
+            top: offsetPosition,
+            behavior: 'smooth'
+          });
+        }
+      }, 100);
+    }
+  }, [location]);
+
   return (
     <div className="min-h-screen">
       <Header />

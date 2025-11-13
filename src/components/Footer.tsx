@@ -1,5 +1,6 @@
 import React from 'react';
-import { Link } from 'react-scroll';
+import { Link as ScrollLink } from 'react-scroll';
+import { Link as RouterLink } from 'react-router-dom';
 import { useLanguage } from '../context/LanguageContext';
 import { useTranslation } from 'react-i18next';
 import translations from '@/locales/translations.json';
@@ -31,7 +32,7 @@ const Footer: React.FC = () => {
   <div className="px-4 sm:px-6 lg:px-8">
     <nav className="flex flex-wrap gap-x-6 gap-y-3 text-sm font-bold">
       {navigationItems.map((item) => (
-        <Link
+        <ScrollLink
           key={item.key}
           to={item.to}
           smooth={true}
@@ -39,7 +40,7 @@ const Footer: React.FC = () => {
           className="text-gray-300 hover:text-white cursor-pointer transition-colors"
         >
           {translate(item.translationKey)}
-        </Link>
+        </ScrollLink>
       ))}
     </nav>
   </div>
@@ -107,15 +108,15 @@ const Footer: React.FC = () => {
         {/* Bottom Section */}
         <div className="border-t border-white/10 pt-6 flex flex-wrap justify-between items-center gap-4 text-sm font-bold  text-gray-400">
           <div className="flex gap-6">
-            <a href="#" className="hover:text-white transition-colors">
+            <RouterLink to="/cookies" className="hover:text-white transition-colors">
               {t.cookies[language as 'en' | 'ar']}
-            </a>
-            <a href="#" className="hover:text-white transition-colors">
+            </RouterLink>
+            <RouterLink to="/privacy" className="hover:text-white transition-colors">
               {t.privacy[language as 'en' | 'ar']}
-            </a>
-            <a href="#" className="hover:text-white transition-colors">
+            </RouterLink>
+            <RouterLink to="/terms" className="hover:text-white transition-colors">
               {t.terms[language as 'en' | 'ar']}
-            </a>
+            </RouterLink>
           </div>
           <p>© {currentYear} {t.copyright[language as 'en' | 'ar']}</p>
         </div>

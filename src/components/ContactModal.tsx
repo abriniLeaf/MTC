@@ -127,7 +127,7 @@ const ContactModal: React.FC<ContactModalProps> = ({ isOpen, onClose }) => {
                 />
                 <label
                   htmlFor="fullName"
-                  className="absolute left-5 top-1/2 -translate-y-1/2 text-gray-500 text-sm transition-all duration-200 pointer-events-none peer-focus:top-2 peer-focus:text-xs peer-focus:text-gray-600 peer-[:not(:placeholder-shown)]:top-2 peer-[:not(:placeholder-shown)]:text-xs"
+                  className="absolute font-bold left-5 top-1/2 -translate-y-1/2 text-gray-500 text-sm transition-all duration-200 pointer-events-none peer-focus:top-2 peer-focus:text-xs peer-focus:text-gray-600 peer-[:not(:placeholder-shown)]:top-2 peer-[:not(:placeholder-shown)]:text-xs"
                 >
                   {t.fullName[language as 'en' | 'ar']} <span className="text-red-500">*</span>
                 </label>
@@ -156,7 +156,7 @@ const ContactModal: React.FC<ContactModalProps> = ({ isOpen, onClose }) => {
                 />
                 <label
                   htmlFor="companyEmail"
-                  className="absolute left-5 top-1/2 -translate-y-1/2 text-gray-500 text-sm transition-all duration-200 pointer-events-none peer-focus:top-2 peer-focus:text-xs peer-focus:text-gray-600 peer-[:not(:placeholder-shown)]:top-2 peer-[:not(:placeholder-shown)]:text-xs"
+                  className="absolute font-bold left-5 top-1/2 -translate-y-1/2 text-gray-500 text-sm transition-all duration-200 pointer-events-none peer-focus:top-2 peer-focus:text-xs peer-focus:text-gray-600 peer-[:not(:placeholder-shown)]:top-2 peer-[:not(:placeholder-shown)]:text-xs"
                 >
                   {t.companyEmail[language as 'en' | 'ar']} <span className="text-red-500">*</span>
                 </label>
@@ -181,11 +181,11 @@ const ContactModal: React.FC<ContactModalProps> = ({ isOpen, onClose }) => {
                   value={formData.companyName}
                   onChange={(e) => handleChange('companyName', e.target.value)}
                   placeholder=" "
-                  className="peer w-full px-5 pt-7 pb-3 border border-gray-300 rounded-full focus:outline-none focus:border-primary text-sm transition-colors"
+                  className="peer font-bold w-full px-5 pt-7 pb-3 border border-gray-300 rounded-full focus:outline-none focus:border-primary text-sm transition-colors"
                 />
                 <label
                   htmlFor="companyName"
-                  className="absolute left-5 top-1/2 -translate-y-1/2 text-gray-500 text-sm transition-all duration-200 pointer-events-none peer-focus:top-2 peer-focus:text-xs peer-focus:text-gray-600 peer-[:not(:placeholder-shown)]:top-2 peer-[:not(:placeholder-shown)]:text-xs"
+                  className="absolute font-bold left-5 top-1/2 -translate-y-1/2 text-gray-500 text-sm transition-all duration-200 pointer-events-none peer-focus:top-2 peer-focus:text-xs peer-focus:text-gray-600 peer-[:not(:placeholder-shown)]:top-2 peer-[:not(:placeholder-shown)]:text-xs"
                 >
                   {t.companyName[language as 'en' | 'ar']} <span className="text-red-500">*</span>
                 </label>
@@ -233,7 +233,7 @@ const ContactModal: React.FC<ContactModalProps> = ({ isOpen, onClose }) => {
                         className: 'hidden'
                       }}
                     />
-                    <span className="text-sm font-medium text-gray-700">{getDialCode()}</span>
+                    <span className="text-sm font-bold  text-gray-700">{getDialCode()}</span>
                   </div>
                 </div>
 
@@ -249,7 +249,7 @@ const ContactModal: React.FC<ContactModalProps> = ({ isOpen, onClose }) => {
                   />
                   <label
                     htmlFor="phoneNumber"
-                    className="absolute left-5 top-1/2 -translate-y-1/2 text-gray-500 text-sm transition-all duration-200 pointer-events-none peer-focus:top-2 peer-focus:text-xs peer-focus:text-gray-600 peer-[:not(:placeholder-shown)]:top-2 peer-[:not(:placeholder-shown)]:text-xs"
+                    className="absolute font-bold left-5 top-1/2 -translate-y-1/2 text-gray-500 text-sm transition-all duration-200 pointer-events-none peer-focus:top-2 peer-focus:text-xs peer-focus:text-gray-600 peer-[:not(:placeholder-shown)]:top-2 peer-[:not(:placeholder-shown)]:text-xs"
                   >
                     {t.phoneNumber[language as 'en' | 'ar']} <span className="text-red-500">*</span>
                   </label>
