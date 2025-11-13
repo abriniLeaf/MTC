@@ -44,6 +44,41 @@
   scrollbar-width: none;  /* Firefox */
 }
 
+/* Country Flag Only Display */
+.country-flag-only .PhoneInput {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.country-flag-only .PhoneInputCountry {
+  position: relative;
+  display: flex;
+  align-items: center;
+  border: none;
+  background: transparent;
+  padding: 0;
+}
+
+.country-flag-only .PhoneInputCountryIcon {
+  width: 2rem;
+  height: 2rem;
+  border-radius: 0.25rem;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.country-flag-only .PhoneInputCountryIcon img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Hide the dropdown arrow */
+.country-flag-only .PhoneInputCountrySelectArrow {
+  display: none;
+}
+
 /* * {
   margin: 0;
   padding: 0;

@@ -5,6 +5,7 @@ import LanguageSwitcher from './LanguageSwitcher';
 import { useLanguage } from '../context/LanguageContext';
 import MTCLogo from '../assets/MTC_logo.png';
 import { navigationItems } from '@/config/navigation';
+import ContactModal from './ContactModal';
 
 const Header: React.FC = () => {
   const { t } = useTranslation();
@@ -13,6 +14,7 @@ const Header: React.FC = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isSearchOpen, setIsSearchOpen] = useState(false);
   const [searchQuery, setSearchQuery] = useState('');
+  const [isContactModalOpen, setIsContactModalOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -60,18 +62,28 @@ const Header: React.FC = () => {
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center gap-8">
             {navigationItems.map((item) => (
-              <Link
-                key={item.key}
-                to={item.to}
-                smooth={true}
-                duration={500}
-                spy={true}
-                offset={-80}
-                className="text-gray-700 hover:text-primary-800 cursor-pointer transition-colors duration-200 font-medium"
-                activeClass="!text-primary-800 font-semibold"
-              >
-                {t(item.translationKey)}
-              </Link>
+              item.key === 'contact' ? (
+                <button
+                  key={item.key}
+                  onClick={() => setIsContactModalOpen(true)}
+                  className="text-gray-700 hover:text-primary-800 cursor-pointer transition-colors duration-200 font-medium"
+                >
+                  {t(item.translationKey)}
+                </button>
+              ) : (
+                <Link
+                  key={item.key}
+                  to={item.to}
+                  smooth={true}
+                  duration={500}
+                  spy={true}
+                  offset={-80}
+                  className="text-gray-700 hover:text-primary-800 cursor-pointer transition-colors duration-200 font-medium"
+                  activeClass="!text-primary-800 font-semibold"
+                >
+                  {t(item.translationKey)}
+                </Link>
+              )
             ))}
           </nav>
 
@@ -198,19 +210,32 @@ const Header: React.FC = () => {
           <div className="md:hidden py-4 border-t border-gray-200">
             <nav className="flex flex-col gap-4">
               {navigationItems.map((item) => (
-                <Link
-                  key={item.key}
-                  to={item.to}
-                  smooth={true}
-                  duration={500}
-                  spy={true}
-                  offset={-80}
-                  className="text-gray-700 hover:text-primary-800 cursor-pointer transition-colors duration-200 font-medium py-2"
-                  activeClass="!text-primary-800 font-semibold"
-                  onClick={() => setIsMobileMenuOpen(false)}
-                >
-                  {t(item.translationKey)}
-                </Link>
+                item.key === 'contact' ? (
+                  <button
+                    key={item.key}
+                    onClick={() => {
+                      setIsContactModalOpen(true);
+                      setIsMobileMenuOpen(false);
+                    }}
+                    className="text-gray-700 hover:text-primary-800 cursor-pointer transition-colors duration-200 font-medium py-2 text-left"
+                  >
+                    {t(item.translationKey)}
+                  </button>
+                ) : (
+                  <Link
+                    key={item.key}
+                    to={item.to}
+                    smooth={true}
+                    duration={500}
+                    spy={true}
+                    offset={-80}
+                    className="text-gray-700 hover:text-primary-800 cursor-pointer transition-colors duration-200 font-medium py-2"
+                    activeClass="!text-primary-800 font-semibold"
+                    onClick={() => setIsMobileMenuOpen(false)}
+                  >
+                    {t(item.translationKey)}
+                  </Link>
+                )
               ))}
               <div className="flex flex-col gap-3 pt-4 border-t border-gray-200">
                 {/* Mobile Search */}
@@ -300,6 +325,12 @@ const Header: React.FC = () => {
           </div>
         )}
       </div>
+      
+      {/* Contact Modal */}
+      <ContactModal 
+        isOpen={isContactModalOpen} 
+        onClose={() => setIsContactModalOpen(false)} 
+      />
     </header>
   );
 };

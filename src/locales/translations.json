@@ -957,5 +957,63 @@
         "ar": "اختر الموارد التي تحتاجها ودع فريقنا يطابقك مع المواهب والباقات المناسبة."
       }
     }
+  },
+  "contactModal": {
+    "Get_in": {
+      "en": "Get in",
+      "ar": "تواصل معنا"
+    },
+    "touch": {
+      "en": "Touch",
+      "ar": "تواصل معنا"
+    },
+    "subtitle": {
+      "en": "We're here to assist you.",
+      "ar": "نحن هنا لمساعدتك."
+    },
+    "fullName": {
+      "en": "Full Name",
+      "ar": "الاسم الكامل"
+    },
+    "fullNamePlaceholder": {
+      "en": "Abeer Aldilany",
+      "ar": "عبير الديلاني"
+    },
+    "companyEmail": {
+      "en": "Company Email",
+      "ar": "البريد الإلكتروني للشركة"
+    },
+    "companyEmailPlaceholder": {
+      "en": "a.kilani94@gmail.com",
+      "ar": "a.kilani94@gmail.com"
+    },
+    "companyName": {
+      "en": "Company Name",
+      "ar": "اسم الشركة"
+    },
+    "companyNamePlaceholder": {
+      "en": "Company Name",
+      "ar": "اسم الشركة"
+    },
+    "phoneNumber": {
+      "en": "Phone Number",
+      "ar": "رقم الهاتف"
+    },
+    "phoneNumberPlaceholder": {
+      "en": "78 500 4950",
+      "ar": "78 500 4950"
+    },
+    "send": {
+      "en": "Send",
+      "ar": "إرسال"
+    },
+    "callUs": {
+      "en": "Call Us",
+      "ar": "اتصل بنا"
+    },
+    "chatToSupport": {
+      "en": "Chat to Support",
+      "ar": "الدردشة مع الدعم"
+    }
   }
 }
