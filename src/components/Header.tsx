@@ -173,7 +173,7 @@ const Header: React.FC = () => {
                       />
                     </svg>
                   </button>
-                  <button className={`px-6 py-2 rounded-full bg-blue-900 hover:bg-blue-950 text-white font-medium transition-colors duration-200 text-sm flex-shrink-0 ${isRTL ? 'ml-0' : 'mr-0'}`}>
+                  <button className={`px-6 py-2 rounded-full bg-secondary hover:bg-secondary text-white font-medium transition-colors duration-200 text-sm flex-shrink-0 ${isRTL ? 'ml-0' : 'mr-0'}`}>
                     {t('nav.search')}
                   </button>
                 </div>
@@ -277,7 +277,7 @@ const Header: React.FC = () => {
                     <button className="px-6 py-2.5 rounded-full bg-pink-600 hover:bg-pink-700 text-white font-medium transition-colors duration-200">
                       {t('nav.applyClient')}
                     </button>
-                    <button className="px-6 py-2.5 rounded-full bg-blue-900 hover:bg-blue-950 text-white font-medium transition-colors duration-200">
+                    <button className="px-6 py-2.5 rounded-full bg-secondary hover:bg-secondary text-white font-medium transition-colors duration-200">
                       {t('nav.applyVendor')}
                     </button>
                   </div>
@@ -338,11 +338,11 @@ const Header: React.FC = () => {
           </div>
         )}
       </div>
-      
+
       {/* Contact Modal */}
-      <ContactModal 
-        isOpen={isContactModalOpen} 
-        onClose={() => setIsContactModalOpen(false)} 
+      <ContactModal
+        isOpen={isContactModalOpen}
+        onClose={() => setIsContactModalOpen(false)}
       />
     </header>
   );
