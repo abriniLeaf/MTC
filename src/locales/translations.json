@@ -1016,6 +1016,444 @@
       "ar": "الدردشة مع الدعم"
     }
   },
+  "login": {
+    "welcomeBack": {
+      "en": "Welcome Back !",
+      "ar": "مرحبًا بعودتك !"
+    },
+    "loginToAccount": {
+      "en": "Login to your Business Account",
+      "ar": "تسجيل الدخول إلى حساب عملك"
+    },
+    "companyEmail": {
+      "en": "Company Email",
+      "ar": "البريد الإلكتروني للشركة"
+    },
+    "password": {
+      "en": "Password",
+      "ar": "كلمة المرور"
+    },
+    "rememberMe": {
+      "en": "Remember Me",
+      "ar": "تذكرني"
+    },
+    "forgotPassword": {
+      "en": "Forgot Password?",
+      "ar": "نسيت كلمة المرور؟"
+    },
+    "loginButton": {
+      "en": "Login",
+      "ar": "تسجيل الدخول"
+    },
+    "google": {
+      "en": "Google",
+      "ar": "جوجل"
+    },
+    "microsoft": {
+      "en": "Microsoft",
+      "ar": "مايكروسوفت"
+    },
+    "dontHaveAccount": {
+      "en": "Don't Have An Account?",
+      "ar": "ليس لديك حساب؟"
+    },
+    "signUp": {
+      "en": "Sign Up",
+      "ar": "إنشاء حساب"
+    },
+    "forgotPasswordTitle": {
+      "en": "Forgot Password",
+      "ar": "نسيت كلمة المرور"
+    },
+    "forgotPasswordSubtitle": {
+      "en": "Enter your email address and we will send you instructions to reset your password",
+      "ar": "أدخل عنوان بريدك الإلكتروني وسنرسل لك تعليمات لإعادة تعيين كلمة المرور الخاصة بك"
+    },
+    "continue": {
+      "en": "Continue",
+      "ar": "متابعة"
+    },
+    "rememberedPassword": {
+      "en": "Remembered your password?",
+      "ar": "تذكرت كلمة المرور الخاصة بك؟"
+    },
+    "backToLogin": {
+      "en": "Login",
+      "ar": "تسجيل الدخول"
+    },
+    "verifyEmailTitle": {
+      "en": "Verify Your Email Address",
+      "ar": "تحقق من عنوان بريدك الإلكتروني"
+    },
+    "verifyEmailSubtitle": {
+      "en": "A six-digit code has been sent to your email",
+      "ar": "تم إرسال رمز مكون من ستة أرقام إلى بريدك الإلكتروني"
+    },
+    "verify": {
+      "en": "Verify",
+      "ar": "تحقق"
+    },
+    "resendCode": {
+      "en": "Resend code in",
+      "ar": "إعادة إرسال الرمز في"
+    },
+    "resetPasswordTitle": {
+      "en": "Reset Password",
+      "ar": "إعادة تعيين كلمة المرور"
+    },
+    "resetPasswordSubtitle": {
+      "en": "Your new password must be different from previous used passwords",
+      "ar": "يجب أن تكون كلمة المرور الجديدة مختلفة عن كلمات المرور المستخدمة سابقًا"
+    },
+    "newPassword": {
+      "en": "Enter a new password",
+      "ar": "أدخل كلمة مرور جديدة"
+    },
+    "confirmPassword": {
+      "en": "Confirm your password",
+      "ar": "تأكيد كلمة المرور"
+    },
+    "changePassword": {
+      "en": "Change Password",
+      "ar": "تغيير كلمة المرور"
+    }
+  },
+  "signup": {
+    "hello": {
+      "en": "Hello !",
+      "ar": "مرحبًا !"
+    },
+    "createAccount": {
+      "en": "Let's create your Business Account",
+      "ar": "لنقم بإنشاء حساب عملك"
+    },
+    "fullName": {
+      "en": "Full Name",
+      "ar": "الاسم الكامل"
+    },
+    "companyEmail": {
+      "en": "Company Email",
+      "ar": "البريد الإلكتروني للشركة"
+    },
+    "password": {
+      "en": "Password",
+      "ar": "كلمة المرور"
+    },
+    "acceptTerms": {
+      "en": "Accept",
+      "ar": "أوافق على"
+    },
+    "termsAndConditions": {
+      "en": "Terms & Conditions",
+      "ar": "الشروط والأحكام"
+    },
+    "signUpButton": {
+      "en": "Sign Up",
+      "ar": "إنشاء حساب"
+    },
+    "google": {
+      "en": "Google",
+      "ar": "جوجل"
+    },
+    "microsoft": {
+      "en": "Microsoft",
+      "ar": "مايكروسوفت"
+    },
+    "alreadyHaveAccount": {
+      "en": "Already Have An Account?",
+      "ar": "لديك حساب بالفعل؟"
+    },
+    "login": {
+      "en": "Login",
+      "ar": "تسجيل الدخول"
+    }
+  },
+  "registration": {
+    "step1": {
+      "title": {
+        "en": "Tell us about your company",
+        "ar": "أخبرنا عن شركتك"
+      },
+      "subtitle": {
+        "en": "We'll use this info to better match you with top vendors or talent.",
+        "ar": "سنستخدم هذه المعلومات لمطابقتك بشكل أفضل مع أفضل الموردين أو المواهب."
+      },
+      "companyName": {
+        "en": "Company Name",
+        "ar": "اسم الشركة"
+      },
+      "companyNamePlaceholder": {
+        "en": "Company Name",
+        "ar": "اسم الشركة"
+      },
+      "companySize": {
+        "en": "Company Size",
+        "ar": "حجم الشركة"
+      },
+      "companySizePlaceholder": {
+        "en": "Just me",
+        "ar": "أنا فقط"
+      },
+      "department": {
+        "en": "Department",
+        "ar": "القسم"
+      },
+      "departmentPlaceholder": {
+        "en": "Operations",
+        "ar": "العمليات"
+      },
+      "industry": {
+        "en": "Industry",
+        "ar": "الصناعة"
+      },
+      "industryPlaceholder": {
+        "en": "Construction",
+        "ar": "البناء"
+      }
+    },
+    "step2": {
+      "title": {
+        "en": "What would you like to achieve with MTC?",
+        "ar": "ماذا تريد أن تحقق مع MTC؟"
+      },
+      "subtitle": {
+        "en": "This helps us customize your dashboard and experience.",
+        "ar": "هذا يساعدنا في تخصيص لوحة المعلومات والتجربة الخاصة بك."
+      },
+      "findEmployees": {
+        "en": "Find employees for a specific job",
+        "ar": "العثور على موظفين لوظيفة محددة"
+      },
+      "browseVendors": {
+        "en": "Browse vendors and compare offers",
+        "ar": "تصفح الموردين وقارن العروض"
+      },
+      "postProject": {
+        "en": "Post a hiring project",
+        "ar": "نشر مشروع توظيف"
+      },
+      "exploring": {
+        "en": "Just exploring for now",
+        "ar": "مجرد استكشاف في الوقت الحالي"
+      }
+    },
+    "step3": {
+      "title": {
+        "en": "What type of roles or services are you looking to hire?",
+        "ar": "ما نوع الأدوار أو الخدمات التي تبحث عن توظيفها؟"
+      },
+      "subtitle": {
+        "en": "So we can match you with the right vendors and employees.",
+        "ar": "حتى نتمكن من مطابقتك مع الموردين والموظفين المناسبين."
+      },
+      "designCreative": {
+        "en": "Design & Creative",
+        "ar": "التصميم والإبداع"
+      },
+      "developmentIT": {
+        "en": "Development & IT",
+        "ar": "التطوير وتكنولوجيا المعلومات"
+      },
+      "graphicDesigners": {
+        "en": "Graphic Designers",
+        "ar": "مصممي الجرافيك"
+      },
+      "uiuxDesigners": {
+        "en": "UI/UX Designers",
+        "ar": "مصممي واجهة المستخدم/تجربة المستخدم"
+      },
+      "productDesigners": {
+        "en": "Product Designers",
+        "ar": "مصممي المنتجات"
+      },
+      "motionDesigners": {
+        "en": "Motion Designers",
+        "ar": "مصممي الحركة"
+      },
+      "brandingSpecialists": {
+        "en": "Branding Specialists",
+        "ar": "متخصصي العلامات التجارية"
+      },
+      "videoEditors": {
+        "en": "Video Editors",
+        "ar": "محرري الفيديو"
+      },
+      "marketingSales": {
+        "en": "Marketing & Sales",
+        "ar": "التسويق والمبيعات"
+      },
+      "adminOperations": {
+        "en": "Admin & Operations",
+        "ar": "الإدارة والعمليات"
+      },
+      "financeLegal": {
+        "en": "Finance & Legal",
+        "ar": "المالية والقانونية"
+      },
+      "customerSupport": {
+        "en": "Customer Support",
+        "ar": "دعم العملاء"
+      },
+      "specializedRoles": {
+        "en": "Specialized or Industry Roles",
+        "ar": "أدوار متخصصة أو صناعية"
+      },
+      "webDevelopers": {
+        "en": "Web Developers",
+        "ar": "مطوري الويب"
+      },
+      "mobileDevelopers": {
+        "en": "Mobile Developers",
+        "ar": "مطوري الجوال"
+      },
+      "backendDevelopers": {
+        "en": "Backend Developers",
+        "ar": "مطوري الواجهة الخلفية"
+      },
+      "devOpsEngineers": {
+        "en": "DevOps Engineers",
+        "ar": "مهندسي DevOps"
+      },
+      "dataScientists": {
+        "en": "Data Scientists",
+        "ar": "علماء البيانات"
+      },
+      "qaTesters": {
+        "en": "QA Testers",
+        "ar": "مختبري ضمان الجودة"
+      },
+      "digitalMarketers": {
+        "en": "Digital Marketers",
+        "ar": "مسوقين رقميين"
+      },
+      "contentWriters": {
+        "en": "Content Writers",
+        "ar": "كتاب المحتوى"
+      },
+      "seoSpecialists": {
+        "en": "SEO Specialists",
+        "ar": "متخصصي تحسين محركات البحث"
+      },
+      "salesReps": {
+        "en": "Sales Representatives",
+        "ar": "ممثلي المبيعات"
+      },
+      "socialMediaManagers": {
+        "en": "Social Media Managers",
+        "ar": "مديري وسائل التواصل الاجتماعي"
+      },
+      "projectManagers": {
+        "en": "Project Managers",
+        "ar": "مديري المشاريع"
+      },
+      "hrSpecialists": {
+        "en": "HR Specialists",
+        "ar": "متخصصي الموارد البشرية"
+      },
+      "executiveAssistants": {
+        "en": "Executive Assistants",
+        "ar": "مساعدين تنفيذيين"
+      },
+      "dataEntryClerk": {
+        "en": "Data Entry Clerks",
+        "ar": "كتبة إدخال البيانات"
+      },
+      "operationsManagers": {
+        "en": "Operations Managers",
+        "ar": "مديري العمليات"
+      },
+      "accountants": {
+        "en": "Accountants",
+        "ar": "محاسبين"
+      },
+      "financialAnalysts": {
+        "en": "Financial Analysts",
+        "ar": "محللين ماليين"
+      },
+      "legalAdvisors": {
+        "en": "Legal Advisors",
+        "ar": "مستشارين قانونيين"
+      },
+      "complianceOfficers": {
+        "en": "Compliance Officers",
+        "ar": "مسؤولي الامتثال"
+      },
+      "customerServiceReps": {
+        "en": "Customer Service Representatives",
+        "ar": "ممثلي خدمة العملاء"
+      },
+      "technicalSupport": {
+        "en": "Technical Support Specialists",
+        "ar": "متخصصي الدعم الفني"
+      },
+      "chatSupport": {
+        "en": "Chat Support Agents",
+        "ar": "وكلاء دعم الدردشة"
+      },
+      "callCenterAgents": {
+        "en": "Call Center Agents",
+        "ar": "وكلاء مركز الاتصال"
+      },
+      "industryConsultants": {
+        "en": "Industry Consultants",
+        "ar": "مستشارين صناعيين"
+      },
+      "businessAnalysts": {
+        "en": "Business Analysts",
+        "ar": "محللي الأعمال"
+      },
+      "supplyChainManagers": {
+        "en": "Supply Chain Managers",
+        "ar": "مديري سلسلة التوريد"
+      },
+      "productManagers": {
+        "en": "Product Managers",
+        "ar": "مديري المنتجات"
+      }
+    },
+    "step4": {
+      "title": {
+        "en": "Pick a plan that fits your needs",
+        "ar": "اختر خطة تناسب احتياجاتك"
+      },
+      "subtitle": {
+        "en": "You can always change or skip this for now.",
+        "ar": "يمكنك دائمًا تغيير أو تخطي هذا الآن."
+      }
+    },
+    "completion": {
+      "title": {
+        "en": "Thanks, {name}!",
+        "ar": "شكرًا، {name}!"
+      },
+      "subtitle": {
+        "en": "Your account setup is complete.",
+        "ar": "إعداد حسابك مكتمل."
+      },
+      "description": {
+        "en": "Our team is reviewing your request. Once approved, you'll receive an email and gain full access to your dashboard.",
+        "ar": "يقوم فريقنا بمراجعة طلبك. بمجرد الموافقة، ستتلقى بريدًا إلكترونيًا وتحصل على وصول كامل إلى لوحة المعلومات الخاصة بك."
+      },
+      "backToWebsite": {
+        "en": "Back to Website",
+        "ar": "العودة إلى الموقع"
+      }
+    },
+    "buttons": {
+      "back": {
+        "en": "Back",
+        "ar": "رجوع"
+      },
+      "next": {
+        "en": "Next",
+        "ar": "التالي"
+      },
+      "skipForNow": {
+        "en": "Skip for now",
+        "ar": "تخطي الآن"
+      }
+    }
+  },
   "legalPages": {
     "lastUpdated": {
       "en": "Last Updated",
