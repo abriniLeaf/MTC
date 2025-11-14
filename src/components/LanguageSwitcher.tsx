@@ -7,12 +7,12 @@ const LanguageSwitcher: React.FC = () => {
   return (
     <button
       onClick={toggleLanguage}
-      className="relative flex items-center gap-2 px-3 py-2 xl:px-4 rounded-full bg-gradient-to-r from-blue-50 to-indigo-50 hover:from-blue-100 hover:to-indigo-100 border border-blue-200 hover:border-blue-300 transition-all duration-300 shadow-sm hover:shadow-md flex-shrink-0 group"
+      className="relative flex items-center gap-2 px-3 py-2 xl:px-4 rounded-full bg-gradient-to-r from-blue-50 to-indigo-50 hover:from-blue-100 hover:to-indigo-100 border border-blue-200 hover:border-blue-300 transition-all duration-200 shadow-sm hover:shadow-md flex-shrink-0 group"
       aria-label="Toggle Language"
     >
       {/* Globe Icon */}
       <svg
-        className="w-4 h-4 xl:w-5 xl:h-5 text-blue-600 group-hover:text-blue-700 transition-colors duration-200"
+        className="w-4 h-4 xl:w-5 xl:h-5 text-blue-600 group-hover:text-blue-700 transition-colors"
         fill="none"
         stroke="currentColor"
         viewBox="0 0 24 24"
@@ -26,12 +26,14 @@ const LanguageSwitcher: React.FC = () => {
       </svg>
       
       {/* Language Text */}
-      <span className="text-xs xl:text-sm font-semibold text-blue-700 group-hover:text-blue-800 transition-colors duration-200 whitespace-nowrap">
-        {language === 'en' ? 'عربي' : 'EN'}
+      <span className="text-xs xl:text-sm font-semibold text-blue-700 group-hover:text-blue-800 transition-colors whitespace-nowrap">
+        {language === 'en' ? 'ع' : 'EN'}
       </span>
       
-      {/* Animated indicator */}
-      <div className="absolute inset-0 rounded-full bg-gradient-to-r from-blue-400 to-indigo-400 opacity-0 group-hover:opacity-10 transition-opacity duration-300"></div>
+      {/* Tooltip on hover - hidden on mobile */}
+      <span className="hidden lg:block absolute -bottom-8 left-1/2 -translate-x-1/2 bg-gray-900 text-white text-xs px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity duration-200 pointer-events-none whitespace-nowrap z-50">
+        {language === 'en' ? 'Switch to Arabic' : 'Switch to English'}
+      </span>
     </button>
   );
 };

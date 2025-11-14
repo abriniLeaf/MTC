@@ -183,34 +183,37 @@ const Header: React.FC = () => {
           </div>
 
           {/* Mobile Menu Button */}
-          <button
-            className="lg:hidden p-2"
-            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            aria-label="Toggle menu"
-          >
-            <svg
-              className="w-6 h-6"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
+          <div className="lg:hidden flex items-center gap-2">
+            <LanguageSwitcher />
+            <button
+              className="p-2"
+              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+              aria-label="Toggle menu"
             >
-              {isMobileMenuOpen ? (
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M6 18L18 6M6 6l12 12"
-                />
-              ) : (
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M4 6h16M4 12h16M4 18h16"
-                />
-              )}
-            </svg>
-          </button>
+              <svg
+                className="w-6 h-6"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                {isMobileMenuOpen ? (
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M6 18L18 6M6 6l12 12"
+                  />
+                ) : (
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M4 6h16M4 12h16M4 18h16"
+                  />
+                )}
+              </svg>
+            </button>
+          </div>
         </div>
 
         {/* Mobile Menu */}
@@ -271,7 +274,7 @@ const Header: React.FC = () => {
                       </svg>
                       {t('nav.search')}
                     </button>
-                    <button className="px-6 py-2.5 rounded-full bg-pink-500 hover:bg-pink-600 text-white font-medium transition-colors duration-200">
+                    <button className="px-6 py-2.5 rounded-full bg-pink-600 hover:bg-pink-700 text-white font-medium transition-colors duration-200">
                       {t('nav.applyClient')}
                     </button>
                     <button className="px-6 py-2.5 rounded-full bg-blue-900 hover:bg-blue-950 text-white font-medium transition-colors duration-200">
@@ -330,7 +333,6 @@ const Header: React.FC = () => {
                     </div>
                   </div>
                 )}
-                <LanguageSwitcher />
               </div>
             </nav>
           </div>
