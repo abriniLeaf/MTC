@@ -1,0 +1,40 @@
+/* Service Cards Grid Layout */
+.service-cards-grid {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr 1.2fr;
+  grid-template-rows: repeat(2, 1fr);
+  gap: 14px;
+  max-width: 100%;
+  width: 100%;
+}
+
+/* Large card spans 2 rows */
+.service-cards-grid > :first-child {
+  grid-row: span 2;
+}
+
+/* Responsive Grid */
+@media (max-width: 1024px) {
+  .service-cards-grid {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto;
+    gap: 12px;
+  }
+
+  .service-cards-grid > :first-child {
+    grid-row: span 1;
+    grid-column: span 2;
+  }
+}
+
+@media (max-width: 640px) {
+  .service-cards-grid {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  .service-cards-grid > :first-child {
+    grid-row: span 1;
+    grid-column: span 1;
+  }
+}

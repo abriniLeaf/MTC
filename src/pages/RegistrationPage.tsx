@@ -458,7 +458,7 @@ const RegistrationPage = () => {
             src={whyChooseUpImage}
             alt="MTC Team"
             className="w-96 h-auto"
-          />
+        />
         </div>
 
         <button

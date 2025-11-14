@@ -67,13 +67,13 @@ const Header: React.FC = () => {
           </div>
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center gap-8">
+          <nav className="hidden lg:flex items-center gap-6 xl:gap-8">
             {navigationItems.map((item) => (
               item.key === 'contact' ? (
                 <button
                   key={item.key}
                   onClick={() => setIsContactModalOpen(true)}
-                  className="text-gray-700 hover:text-primary-800 cursor-pointer transition-colors duration-200 font-medium"
+                  className="text-gray-700 hover:text-primary-800 cursor-pointer transition-colors duration-200 font-medium text-sm xl:text-base whitespace-nowrap"
                 >
                   {t(item.translationKey)}
                 </button>
@@ -85,7 +85,7 @@ const Header: React.FC = () => {
                   duration={500}
                   spy={true}
                   offset={-80}
-                  className="text-gray-700 hover:text-primary-800 cursor-pointer transition-colors duration-200 font-medium"
+                  className="text-gray-700 hover:text-primary-800 cursor-pointer transition-colors duration-200 font-medium text-sm xl:text-base whitespace-nowrap"
                   activeClass="!text-primary-800 font-semibold"
                   onClick={() => handleNavClick(item.to)}
                 >
@@ -96,17 +96,17 @@ const Header: React.FC = () => {
           </nav>
 
           {/* CTA Buttons & Language Switcher */}
-          <div className="hidden md:flex items-center gap-4">
+          <div className="hidden lg:flex items-center gap-2 xl:gap-4">
             {!isSearchOpen ? (
-              <div className="flex items-center gap-4 animate-fadeIn">
+              <div className="flex items-center gap-2 xl:gap-3 animate-fadeIn">
                 {/* Search Icon */}
                 <button
                   onClick={() => setIsSearchOpen(true)}
-                  className="p-2 hover:bg-gray-100 rounded-full transition-colors duration-200 border border-[#d5d5d5]"
+                  className="p-2 hover:bg-gray-100 rounded-full transition-colors duration-200 border border-[#d5d5d5] flex-shrink-0"
                   aria-label="Search"
                 >
                   <svg
-                    className="w-5 h-5 text-gray-600"
+                    className="w-4 h-4 xl:w-5 xl:h-5 text-gray-600"
                     fill="none"
                     stroke="currentColor"
                     viewBox="0 0 24 24"
@@ -119,10 +119,10 @@ const Header: React.FC = () => {
                     />
                   </svg>
                 </button>
-                <button className="px-4 py-2 rounded-full bg-pink-600 hover:bg-pink-600 text-white font-medium transition-colors duration-200">
+                <button className="px-3 py-2 xl:px-4 rounded-full bg-pink-600 hover:bg-pink-700 text-white font-medium transition-colors duration-200 text-xs xl:text-sm whitespace-nowrap">
                   {t('nav.applyClient')}
                 </button>
-                <button className="px-4 py-2 rounded-full bg-blue-900 hover:bg-blue-950 text-white font-medium transition-colors duration-200">
+                <button className="px-3 py-2 xl:px-4 rounded-full bg-blue-900 hover:bg-blue-950 text-white font-medium transition-colors duration-200 text-xs xl:text-sm whitespace-nowrap">
                   {t('nav.applyVendor')}
                 </button>
               </div>
@@ -184,7 +184,7 @@ const Header: React.FC = () => {
 
           {/* Mobile Menu Button */}
           <button
-            className="md:hidden p-2"
+            className="lg:hidden p-2"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             aria-label="Toggle menu"
           >
@@ -215,7 +215,7 @@ const Header: React.FC = () => {
 
         {/* Mobile Menu */}
         {isMobileMenuOpen && (
-          <div className="md:hidden py-4 border-t border-gray-200">
+          <div className="lg:hidden py-4 border-t border-gray-200">
             <nav className="flex flex-col gap-4">
               {navigationItems.map((item) => (
                 item.key === 'contact' ? (

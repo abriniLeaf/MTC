@@ -3,6 +3,7 @@ import { useTranslation } from 'react-i18next';
 import { useLanguage } from '../context/LanguageContext';
 import meetTechLogo from '../assets/meet_tech_logo.png';
 import heroBackground from '../assets/hero_background .png';
+import ServiceCardsGrid from '../components/ServiceCardsGrid';
 
 const Hero: React.FC = () => {
   const { t } = useTranslation();
@@ -39,7 +40,11 @@ const Hero: React.FC = () => {
               </p>
             </div>
           </div>
+
         </div>
+        <div className=''>
+            <ServiceCardsGrid></ServiceCardsGrid>
+          </div>
       </div>
     </section>
   );

@@ -50,14 +50,14 @@ const PlanCard = ({ plan, onSelect, isSelected = false, showScrollableLayout = f
         </h3>
 
         {/* Description */}
-        <p className="text-gray-600 mb-10 text-sm">
+        <p className=" mb-10 text-base">
           {plan.description[language as 'en' | 'ar']}
         </p>
 
         {/* Features List */}
         <ul className="space-y-2 mb-8 ml-3 flex-grow">
           {plan.features.map((feature, idx) => (
-            <li key={idx} className="flex items-start gap-2 text-sm text-gray-700">
+            <li key={idx} className="flex items-start gap-2 text-base ">
               <span className="text-gray-900 mt-0.5">•</span>
               <span>{feature[language as 'en' | 'ar']}</span>
             </li>

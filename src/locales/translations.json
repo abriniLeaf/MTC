@@ -65,16 +65,16 @@
       "ar": "خدمات تصميم واجهة المستخدم وتجربة المستخدم"
     },
     "software": {
-      "en": "Tailored Software Solutions",
-      "ar": "حلول برمجية مخصصة"
+      "en": "Tailored Software\nSolutions",
+      "ar": "حلول برمجية\nمخصصة"
     },
     "quality": {
-      "en": "Quality Assurance System Services",
-      "ar": "خدمات نظام ضمان الجودة"
+      "en": "Quality Assurance\nSystem Services",
+      "ar": "خدمات نظام\nضمان الجودة"
     },
     "consulting": {
-      "en": "Professional Business Consulting",
-      "ar": "استشارات الأعمال المهنية"
+      "en": "Professional Business\nConsulting",
+      "ar": "استشارات الأعمال\nالمهنية"
     }
   },
   "about": {
@@ -293,7 +293,7 @@
       "ar": "نهجنا الفريد"
     },
     "subtitle": {
-      "en": "Explore the core principles that define MTC's value—driving clarity, efficiency, and performance at every level of your operations.",
+      "en": "Explore the core principles that define MTC's value - driving clarity, efficiency, and performance at every level of your operations.",
       "ar": "استكشف المبادئ الأساسية التي تحدد قيمة MTC - تحقيق الوضوح والكفاءة والأداء على كل مستوى من عملياتك."
     },
     "centralizedVisibility": {

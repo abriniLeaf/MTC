@@ -11,10 +11,10 @@ const AboutMTC: React.FC = () => {
         {/* Header */}
         <div className="mb-0 md:mb-20 flex md:flex-row flex-col justify-between md:gap-19 gap-5 align-bottom items-end">
             <div>
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+          <h2 className="text-4xl md:text-7xl font-extrabold text-white mb-6">
             {t('aboutMTC.title')}
           </h2>
-          <p className="text-white/90 text-base md:text-xl leading-relaxed">
+          <p className="text-white/90 text-base md:text-2xl leading-relaxed">
             {t('aboutMTC.description')}
           </p></div>
           <div className="flex justify-end gap-4 mt-0 md:mt-8">
@@ -60,7 +60,7 @@ const AboutMTC: React.FC = () => {
     <h3 className="text-2xl font-bold text-white mb-3 text-justify">
       {t('aboutMTC.vision.title')}
     </h3>
-    <p className="text-white/80 text-sm md:text-sm mb-6 leading-relaxed  ">
+    <p className="text-white/80 text-sm md:text-base mb-6 leading-relaxed  ">
       {t('aboutMTC.vision.description')}
     </p>
     <div className="rounded-2xl overflow-hidden">
@@ -73,11 +73,11 @@ const AboutMTC: React.FC = () => {
   </div>
 
   {/* Mission Card */}
-  <div className={`${isRTL ? 'md:pl-13 md:pr-1 ' : 'pl-0 md:pl-0 md:pr-15'} bg-transparent  `}>
+  <div className={`${isRTL ? 'md:pl-10 md:pr-1 ' : 'pl-0 md:pl-0 md:pr-10'} bg-transparent  `}>
     <h3 className="text-2xl font-bold text-white mb-3">
       {t('aboutMTC.mission.title')}
     </h3>
-    <p className="text-white/80 text-sm md:text-sm mb-6 leading-relaxed ">
+    <p className="text-white/80 text-sm md:text-base mb-6 leading-relaxed ">
       {t('aboutMTC.mission.description')}
     </p>
     <div className="rounded-2xl overflow-hidden">

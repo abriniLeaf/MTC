@@ -50,7 +50,7 @@ const TrustedCompanies: React.FC = () => {
         {/* Header */}
         <div className="text-center mb-12">
           <h2 className="max-w-7xl font-semibold mx-auto text-[20px] md:text-[20px] text-gray-900 mb-4 whitespace-pre-line">
-            {t('trustedCompanies.trustedBy')} <span className="font-bold text-primary text-3xl">{t('trustedCompanies.25_plus')}</span> {t('trustedCompanies.companies')}
+            {t('trustedCompanies.trustedBy')} <span className="font-bold text-secondary text-3xl">{t('trustedCompanies.25_plus')}</span> {t('trustedCompanies.companies')}
           </h2>
         </div>
 
@@ -91,7 +91,7 @@ const TrustedCompanies: React.FC = () => {
             {/* Card 1: No Real-Time Oversight */}
             <div className="bg-main-background rounded-2xl p-8 text-center hover:shadow-lg transition-shadow duration-300">
               <div className="flex justify-center mb-2">
-                <div className="w-30 h-30 flex items-center justify-center">
+                <div className="w-38 h-38 flex items-center justify-center">
 
                 <img src={sitting_reading_chair_img} alt="" />
                 </div>
@@ -99,7 +99,7 @@ const TrustedCompanies: React.FC = () => {
               <h3 className="text-lg font-bold text-gray-900 mb-3">
                 {t('trustedCompanies.features.noOversight.title')}
               </h3>
-              <p className="text-sm text-gray-600 leading-relaxed">
+              <p className="text-sm  leading-relaxed">
                 {t('trustedCompanies.features.noOversight.description')}
               </p>
             </div>
@@ -107,7 +107,7 @@ const TrustedCompanies: React.FC = () => {
             {/* Card 2: Disconnected Systems */}
             <div className="bg-main-background rounded-2xl p-8 text-center hover:shadow-lg transition-shadow duration-300">
               <div className="flex justify-center mb-2">
-                <div className="w-30 h-30 flex items-center justify-center">
+                <div className="w-38 h-38 flex items-center justify-center">
 
                 <img src={sitting_reading_img} alt="" />
                 </div>
@@ -115,7 +115,7 @@ const TrustedCompanies: React.FC = () => {
               <h3 className="text-lg font-bold text-gray-900 mb-3">
                 {t('trustedCompanies.features.disconnected.title')}
               </h3>
-              <p className="text-sm text-gray-600 leading-relaxed">
+              <p className="text-sm  leading-relaxed">
                 {t('trustedCompanies.features.disconnected.description')}
               </p>
             </div>
@@ -123,7 +123,7 @@ const TrustedCompanies: React.FC = () => {
             {/* Card 3: Inconsistent Execution */}
             <div className="bg-main-background rounded-2xl p-8 text-center hover:shadow-lg transition-shadow duration-300">
               <div className="flex justify-center mb-2">
-                <div className="w-30 h-30 flex items-center justify-center">
+                <div className="w-38 h-38 flex items-center justify-center">
 
                   <img src={yogaImg} alt="" />
                 </div>
@@ -131,7 +131,7 @@ const TrustedCompanies: React.FC = () => {
               <h3 className="text-lg font-bold text-gray-900 mb-3">
                 {t('trustedCompanies.features.inconsistent.title')}
               </h3>
-              <p className="text-sm text-gray-600 leading-relaxed">
+              <p className="text-sm  leading-relaxed">
                 {t('trustedCompanies.features.inconsistent.description')}
               </p>
             </div>

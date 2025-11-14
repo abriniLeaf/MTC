@@ -1,0 +1,96 @@
+/* Service Card Base Styles */
+.service-card {
+  position: relative;
+  border-radius: 28px;
+  padding: 24px 28px;
+  background-size: 140%;
+  background-position: center;
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  /* box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08); */
+}
+
+.service-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+}
+
+/* Card Content */
+.service-card-content {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  align-items: flex-start;
+  height: 100%;
+}
+
+/* Card Title */
+.service-card-title {
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 1.3;
+  margin: 0;
+  max-width: 85%;
+  word-wrap: break-word;
+  hyphens: none;
+  white-space: pre-line;
+}
+
+/* Overlay for background images */
+.service-card-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.1) 100%);
+  z-index: 1;
+}
+
+/* Size Variants */
+.service-card-large {
+  min-height: 240px;
+}
+
+.service-card-medium {
+  min-height: 115px;
+}
+
+.service-card-small {
+  min-height: 115px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+  .service-card-large {
+    min-height: 200px;
+  }
+
+  .service-card-title {
+    font-size: 24px;
+    max-width: 70%;
+  }
+
+  .service-card {
+    padding: 20px 24px;
+  }
+}
+
+@media (max-width: 640px) {
+  .service-card-large,
+  .service-card-medium,
+  .service-card-small {
+    min-height: 160px;
+  }
+
+  .service-card-title {
+    font-size: 20px;
+    max-width: 75%;
+  }
+
+  .service-card {
+    border-radius: 20px;
+    padding: 18px 20px;
+  }
+}

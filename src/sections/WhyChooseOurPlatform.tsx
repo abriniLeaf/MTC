@@ -109,14 +109,14 @@ const WhyChooseOurPlatform = () => {
   ];
 
   return (
-    <section className="py-20 px-4 md:px-8 lg:px-16 bg-gray-50">
+    <section className="py-20 px-4 md:px-8 lg:px-16 ">
       <div className="max-w-7xl mx-auto">
         {/* Section Header */}
         <div className="text-left mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+          <h2 className="text-4xl md:text-7xl font-extrabold text-gray-900 mb-6">
             {t.title[language as 'en' | 'ar']}
           </h2>
-          <p className="text-xl text-left  leading-relaxed">
+          <p className="text-2xl text-left  leading-relaxed">
             {t.subtitle[language as 'en' | 'ar']}
           </p>
         </div>
@@ -126,7 +126,7 @@ const WhyChooseOurPlatform = () => {
           {features.map((feature) => (
             <div
               key={feature.id}
-              className="bg-white rounded-2xl p-8 shadow-sm hover:shadow-lg transition-all duration-300 border border-gray-100"
+              className="bg-white rounded-3xl p-8 shadow-sm hover:shadow-lg transition-all duration-300 border border-gray-100"
             >
               {/* Icon Container */}
               <div className={`w-16 h-16 ${feature.bgColor} rounded-2xl flex items-center justify-center mb-6 mx-auto`}>

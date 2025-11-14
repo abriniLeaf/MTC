@@ -59,7 +59,7 @@ const DesignedForAll = () => {
       <div className="max-w-7xl mx-auto">
         {/* Section Header */}
         <div className="text-center mb-7">
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+          <h2 className="text-4xl md:text-7xl font-extrabold text-gray-900 mb-6">
             {t.title[language as 'en' | 'ar']}
           </h2>
           <p className="text-xl  max-w-4xl mx-auto leading-relaxed ">
@@ -115,7 +115,7 @@ const DesignedForAll = () => {
                   {selectedData.heading}
                 </h3>
 
-                <div className="space-y-6">
+                <div className="space-y-4">
                   {selectedData.steps.map((step: any, index: number) => (
                     <div key={index} className="flex gap-4">
                       {/* Step Number */}
@@ -127,11 +127,11 @@ const DesignedForAll = () => {
 
                       {/* Step Content */}
                       <div className="flex-1">
-  <h4 className="text-base sm:text-lg md:text-xl font-semibold text-gray-900 mb-2 leading-snug md:leading-tight">
+  <h4 className="text-base sm:text-lg md:text-xl font-semibold text-gray-900 mb-1 leading-snug md:leading-tight">
     {step.title[language as 'en' | 'ar']}
   </h4>
 
-  <p className="text-gray-600 text-sm sm:text-base leading-relaxed md:leading-loose">
+  <p className="text-gray-600 text-sm sm:text-base leading-loose md:leading-loose">
     {step.description[language as 'en' | 'ar']}
   </p>
 </div>

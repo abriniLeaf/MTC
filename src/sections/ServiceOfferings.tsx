@@ -57,11 +57,11 @@ const ServiceOfferings = () => {
   ];
 
   return (
-    <section  id="services" className="py-20 px-4 md:px-8 lg:px-16 bg-gray-50">
+    <section  id="services" className="py-20 px-4 md:px-8 lg:px-16 ">
       <div className="max-w-7xl mx-auto">
         {/* Section Header */}
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+          <h2 className="text-4xl md:text-7xl font-extrabold text-gray-900 mb-6">
             {t.title[language as 'en' | 'ar']}
           </h2>
           <p className="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
@@ -79,7 +79,7 @@ const ServiceOfferings = () => {
             return (
               <div
                 key={service.id}
-                className={`bg-white rounded-3xl overflow-hidden ${
+                className={` rounded-3xl overflow-hidden py-9 ${
                   index % 2 === 0 ? '' : ''
                 }`}
               >
@@ -88,11 +88,11 @@ const ServiceOfferings = () => {
                   <div className={`p-2 flex flex-col justify-center lg:col-span-2 ${
                     textOnLeft ? 'lg:order-1' : 'lg:order-2'
                   }`}>
-                    <h3 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+                    <h3 className="text-3xl md:text-3xl font-bold text-gray-900 mb-6">
                       {service.title}
                     </h3>
 
-                    <p className="text-lg text-gray-600 mb-8 leading-relaxed">
+                    <p className="text-lg  mb-10 leading-relaxed">
                       {service.description}
                     </p>
 
@@ -101,7 +101,7 @@ const ServiceOfferings = () => {
                       {service.features.map((feature: any, featureIndex: number) => (
                         <div key={featureIndex} className="flex items-center gap-3">
                           <div className="w-2 h-2 bg-primary rounded-full flex-shrink-0"></div>
-                          <span className="text-gray-700 font-medium">
+                          <span className=" font-bold">
                             {feature[language as 'en' | 'ar']}
                           </span>
                         </div>
