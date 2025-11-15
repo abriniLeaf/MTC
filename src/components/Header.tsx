@@ -3,6 +3,7 @@ import { useTranslation } from 'react-i18next';
 import { Link } from 'react-scroll';
 import { useNavigate, useLocation } from 'react-router-dom';
 import LanguageSwitcher from './LanguageSwitcher';
+import AuthDropdown from './AuthDropdown';
 import { useLanguage } from '../context/LanguageContext';
 import MTCLogo from '../assets/MTC_logo.png';
 import { navigationItems } from '@/config/navigation';
@@ -19,6 +20,8 @@ const Header: React.FC = () => {
   const [isSearchOpen, setIsSearchOpen] = useState(false);
   const [searchQuery, setSearchQuery] = useState('');
   const [isContactModalOpen, setIsContactModalOpen] = useState(false);
+  const [showClientDropdown, setShowClientDropdown] = useState(false);
+  const [showVendorDropdown, setShowVendorDropdown] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -27,6 +30,26 @@ const Header: React.FC = () => {
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
+
+  // Close dropdowns when clicking outside
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      const target = event.target as HTMLElement;
+      if (!target.closest('.dropdown-container')) {
+        setShowClientDropdown(false);
+        setShowVendorDropdown(false);
+      }
+    };
+
+    if (showClientDropdown || showVendorDropdown) {
+      document.addEventListener('mousedown', handleClickOutside);
+    }
+
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+    };
+  }, [showClientDropdown, showVendorDropdown]);
+
 
   const handleNavClick = (sectionId: string) => {
     if (isLegalPage) {
@@ -51,7 +74,8 @@ const Header: React.FC = () => {
           {/* Logo */}
           <div className="flex items-center">
             <Link
-              to="hero"
+            to="/"
+              onClick={() => navigate('/')}
               smooth={true}
               duration={500}
               className="cursor-pointer"
@@ -119,12 +143,32 @@ const Header: React.FC = () => {
                     />
                   </svg>
                 </button>
-                <button className="px-3 py-2 xl:px-4 rounded-full bg-pink-600 hover:bg-pink-700 text-white font-medium transition-colors duration-200 text-xs xl:text-sm whitespace-nowrap">
-                  {t('nav.applyClient')}
-                </button>
-                <button className="px-3 py-2 xl:px-4 rounded-full bg-blue-900 hover:bg-blue-950 text-white font-medium transition-colors duration-200 text-xs xl:text-sm whitespace-nowrap">
-                  {t('nav.applyVendor')}
-                </button>
+                {/* Apply as Client Dropdown */}
+                <div className="relative dropdown-container">
+                  <button
+                    onClick={() => {
+                      setShowClientDropdown(!showClientDropdown);
+                      setShowVendorDropdown(false);
+                    }}
+                    className="px-3 py-2 xl:px-4 rounded-full bg-pink-600 hover:bg-pink-700 text-white font-medium transition-colors duration-200 text-xs xl:text-sm whitespace-nowrap"
+                  >
+                    {t('nav.applyClient')}
+                  </button>
+                  {showClientDropdown && <AuthDropdown variant="client" />}
+                </div>
+                {/* Apply as Vendor Dropdown */}
+                <div className="relative dropdown-container">
+                  <button
+                    onClick={() => {
+                      setShowVendorDropdown(!showVendorDropdown);
+                      setShowClientDropdown(false);
+                    }}
+                    className="px-3 py-2 xl:px-4 rounded-full bg-secondary hover:bg-secondary/80 text-white font-medium transition-colors duration-200 text-xs xl:text-sm whitespace-nowrap"
+                  >
+                    {t('nav.applyVendor')}
+                  </button>
+                  {showVendorDropdown && <AuthDropdown variant="vendor" />}
+                </div>
               </div>
             ) : (
               <div className="animate-fadeIn">
@@ -274,12 +318,32 @@ const Header: React.FC = () => {
                       </svg>
                       {t('nav.search')}
                     </button>
-                    <button className="px-6 py-2.5 rounded-full bg-pink-600 hover:bg-pink-700 text-white font-medium transition-colors duration-200">
-                      {t('nav.applyClient')}
-                    </button>
-                    <button className="px-6 py-2.5 rounded-full bg-secondary hover:bg-secondary text-white font-medium transition-colors duration-200">
-                      {t('nav.applyVendor')}
-                    </button>
+                    {/* Mobile Apply as Client Dropdown */}
+                    <div className="relative dropdown-container">
+                      <button
+                        onClick={() => {
+                          setShowClientDropdown(!showClientDropdown);
+                          setShowVendorDropdown(false);
+                        }}
+                        className="w-full px-6 py-2.5 rounded-full bg-pink-600 hover:bg-pink-700 text-white font-medium transition-colors duration-200"
+                      >
+                        {t('nav.applyClient')}
+                      </button>
+                      {showClientDropdown && <AuthDropdown variant="client" />}
+                    </div>
+                    {/* Mobile Apply as Vendor Dropdown */}
+                    <div className="relative dropdown-container">
+                      <button
+                        onClick={() => {
+                          setShowVendorDropdown(!showVendorDropdown);
+                          setShowClientDropdown(false);
+                        }}
+                        className="w-full px-6 py-2.5 rounded-full bg-secondary hover:bg-secondary text-white font-medium transition-colors duration-200"
+                      >
+                        {t('nav.applyVendor')}
+                      </button>
+                      {showVendorDropdown && <AuthDropdown variant="vendor" />}
+                    </div>
                   </div>
                 ) : (
                   <div className="animate-fadeIn">

@@ -1,4 +1,5 @@
 import { useLanguage } from '@/context/LanguageContext';
+import mtc_logo from '../assets/Rectangle_logo.png';
 
 interface PlanCardProps {
   plan: {
@@ -16,14 +17,7 @@ interface PlanCardProps {
 const PlanCard = ({ plan, onSelect, isSelected = false, showScrollableLayout = false }: PlanCardProps) => {
   const { language, isRTL } = useLanguage();
 
-  const PlanIcon = () => (
-    <svg className="w-10 h-10" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <rect width="40" height="40" rx="8" fill="#4F46E5" fillOpacity="0.1"/>
-      <path d="M20 12 L20 28 M12 20 L28 20" stroke="#4F46E5" strokeWidth="2.5" strokeLinecap="round"/>
-      <circle cx="20" cy="20" r="3" fill="#4F46E5"/>
-      <path d="M26 14 L26 26 M14 14 L14 26" stroke="#4F46E5" strokeWidth="1.5" strokeLinecap="round" opacity="0.5"/>
-    </svg>
-  );
+
 
   const handleClick = () => {
     if (onSelect) {
@@ -38,9 +32,9 @@ const PlanCard = ({ plan, onSelect, isSelected = false, showScrollableLayout = f
         className="flex-shrink-0 w-[305px] lg:w-[360px] shadow select-none bg-white rounded-2xl p-6 hover:shadow-lg transition-all duration-300 flex flex-col"
       >
         {/* Icon - Top Left */}
-        <div className="mb-8">
-          <div className="text-blue-600">
-            <PlanIcon />
+        <div className="mb-15">
+          <div className="text-blue-600 h-12 w-12">
+           <img src={mtc_logo} alt='logo' />
           </div>
         </div>
 
@@ -50,7 +44,7 @@ const PlanCard = ({ plan, onSelect, isSelected = false, showScrollableLayout = f
         </h3>
 
         {/* Description */}
-        <p className=" mb-10 text-base">
+        <p className="mb-10 text-base">
           {plan.description[language as 'en' | 'ar']}
         </p>
 

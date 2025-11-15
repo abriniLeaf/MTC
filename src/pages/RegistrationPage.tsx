@@ -4,10 +4,11 @@ import { useLanguage } from '../context/LanguageContext';
 import translations from '@/locales/translations.json';
 import PlanCard from '@/components/PlanCard';
 import whyChooseUpImage from "@/assets/last_step_img.png";
+import LanguageSwitcher from '../components/LanguageSwitcher';
 
 const RegistrationPage = () => {
   const navigate = useNavigate();
-  const { language, toggleLanguage } = useLanguage();
+  const { language } = useLanguage();
   const [currentStep, setCurrentStep] = useState(1);
   const totalSteps = 4;
 
@@ -489,14 +490,7 @@ const RegistrationPage = () => {
               alt="MTC Logo"
               className="h-12 md:h-16"
             /> <div className='hidden md:block'>{currentStep <= totalSteps && <Stepper />}</div>
-            <button
-              onClick={toggleLanguage}
-              className="flex items-center gap-2 px-4 py-2 rounded-full bg-gray-100 hover:bg-gray-200 transition-colors duration-200"
-            >
-              <span className="text-sm font-medium text-gray-700">
-                {language === 'en' ? 'العربية' : 'English'}
-              </span>
-            </button>
+            <LanguageSwitcher />
           </div>
 
           <div className="w-full flex-grow flex flex-col">

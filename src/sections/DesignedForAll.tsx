@@ -59,7 +59,7 @@ const DesignedForAll = () => {
       <div className="max-w-7xl mx-auto">
         {/* Section Header */}
         <div className="text-center mb-7">
-          <h2 className="text-4xl md:text-7xl font-extrabold text-gray-900 mb-6">
+          <h2 className="text-4xl md:text-6xl font-extrabold text-primary mb-6">
             {t.title[language as 'en' | 'ar']}
           </h2>
           <p className="text-xl  max-w-4xl mx-auto leading-relaxed ">
@@ -68,33 +68,33 @@ const DesignedForAll = () => {
         </div>
 
         {/* Stakeholder Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto mb-12">
+        <div className="grid grid-cols-3 gap-3 md:gap-6 max-w-4xl mx-auto mb-12">
           {stakeholders.map((stakeholder) => (
             <div
               key={stakeholder.id}
               onClick={() => setSelectedStakeholder(stakeholder.id)}
               onMouseEnter={() => setHoveredStakeholder(stakeholder.id)}
               onMouseLeave={() => setHoveredStakeholder(null)}
-              className={`group relative bg-white rounded-2xl p-8 transition-all duration-300 cursor-pointer ${
+              className={`group relative bg-white rounded-lg md:rounded-2xl p-3 md:p-8 transition-all duration-300 cursor-pointer ${
                 selectedStakeholder === stakeholder.id
                   ? ''
                   : 'border-transparent '
               }`}
             >
               {/* Icon Container */}
-              <div className="flex justify-center mb-6">
+              <div className="flex justify-center mb-2 md:mb-6">
                 <img
                   src={hoveredStakeholder === stakeholder.id || selectedStakeholder === stakeholder.id ? stakeholder.hoverImg : stakeholder.img}
                   alt={stakeholder.title}
-                  className="w-24 h-24 md:w-40 md:h-40 object-contain transition-all duration-300 group-hover:scale-130"
+                  className="w-16 h-16 md:w-40 md:h-40 object-contain transition-all duration-300 group-hover:scale-110"
                 />
               </div>
 
               {/* Title */}
-              <h3 className={`text-xl  text-center transition-colors duration-300 ${
+              <h3 className={`text-xs md:text-xl text-center transition-colors duration-300 ${
                 hoveredStakeholder === stakeholder.id || selectedStakeholder === stakeholder.id
                   ? 'text-primary font-semibold'
-                  : 'text-gray-500 text-base'
+                  : 'text-gray-500 md:text-base'
               }`}>
                 {stakeholder.title}
               </h3>
@@ -111,7 +111,7 @@ const DesignedForAll = () => {
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-0">
               {/* Left Side - Steps */}
               <div className={`p-8 md:p-8 ml-2 ${language === 'ar' ? 'lg:order-2' : ''}`}>
-                <h3 className="text-3xl font-bold text-gray-900 mb-8">
+                <h3 className="text-3xl font-bold text-primary mb-8">
                   {selectedData.heading}
                 </h3>
 
@@ -127,7 +127,7 @@ const DesignedForAll = () => {
 
                       {/* Step Content */}
                       <div className="flex-1">
-  <h4 className="text-base sm:text-lg md:text-xl font-semibold text-gray-900 mb-1 leading-snug md:leading-tight">
+  <h4 className="text-base sm:text-lg md:text-xl font-semibold text-primary mb-1 leading-snug md:leading-tight">
     {step.title[language as 'en' | 'ar']}
   </h4>
 

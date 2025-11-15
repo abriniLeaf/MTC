@@ -1,6 +1,8 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
 import { useLanguage } from '../context/LanguageContext';
+import vision_img from '../assets/about_mtc/vision.jpg';
+import mission_img from '../assets/about_mtc/mission.jpg';
 
 const AboutMTC: React.FC = () => {
   const { t } = useTranslation();
@@ -11,7 +13,7 @@ const AboutMTC: React.FC = () => {
         {/* Header */}
         <div className="mb-0 md:mb-20 flex md:flex-row flex-col justify-between md:gap-19 gap-5 align-bottom items-end">
             <div>
-          <h2 className="text-4xl md:text-7xl font-extrabold text-white mb-6">
+          <h2 className="text-4xl md:text-6xl font-extrabold text-white mb-6">
             {t('aboutMTC.title')}
           </h2>
           <p className="text-white/90 text-base md:text-2xl leading-relaxed">
@@ -65,7 +67,7 @@ const AboutMTC: React.FC = () => {
     </p>
     <div className="rounded-2xl overflow-hidden">
       <img
-        src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=800&q=80"
+        src={vision_img}
         alt="Vision"
         className="w-full h-[200px] object-cover rounded-2xl"
       />
@@ -82,7 +84,7 @@ const AboutMTC: React.FC = () => {
     </p>
     <div className="rounded-2xl overflow-hidden">
       <img
-        src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=800&q=80"
+        src={mission_img}
         alt="Mission"
         className="w-full h-[200px] object-cover rounded-2xl"
       />

@@ -15,7 +15,7 @@ const Hero: React.FC = () => {
         <div className="grid lg:grid-cols-[1.5fr_1fr] gap-0 md:gap-0 lg:gap-12 items-center">
           {/* Left Content */}
           <div className={``}>
-            <h1 className={`text-5xl md:text-6xl lg:text-7xl font-extrabold text-gray-900 mb-6 leading-tight whitespace-pre-line ${isRTL ? 'text-right' : 'text-left'}`}>
+            <h1 className={`text-5xl md:text-6xl lg:text-7xl font-extrabold text-primary mb-6 leading-tight whitespace-pre-line ${isRTL ? 'text-right' : 'text-left'}`}>
               {t('hero.where_tecnology')}
               {t('hero.meets_strategy')}
             </h1>
@@ -35,7 +35,7 @@ const Hero: React.FC = () => {
 
             <div className={`rounded-2xl ${isRTL ? 'text-right' : 'text-left'}`}>
 
-              <p className="text-gray leading-relaxed">
+              <p className="text-primary leading-relaxed">
              <span className="font-bold ">{t('hero.subtitle')}</span> {t('hero.description')}
               </p>
             </div>

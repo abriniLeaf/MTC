@@ -4,7 +4,8 @@ import { useTranslation } from 'react-i18next';
 import yogaImg from '../assets/yoga.png';
 import sitting_reading_img from '../assets/open-doodles-sitting-and-reading 1 (1).png';
 import sitting_reading_chair_img from '../assets/sitting-and-reading_char.png';
-
+import shipbobLogo from '../assets/compaines/shipbob.png';
+import abode_img from '../assets/compaines/adobe.png'
 const TrustedCompanies: React.FC = () => {
   const { t } = useTranslation();
 
@@ -20,11 +21,11 @@ const TrustedCompanies: React.FC = () => {
     },
     {
       name: 'UNICEF',
-      logo: 'https://upload.wikimedia.org/wikipedia/commons/4/4e/UNICEF_Logo.svg',
+      logo: 'https://upload.wikimedia.org/wikipedia/commons/e/ed/Logo_of_UNICEF.svg',
     },
     {
       name: 'Adobe',
-      logo: 'https://upload.wikimedia.org/wikipedia/commons/8/8d/Adobe_Corporate_Logo.svg',
+      logo: abode_img,
     },
     {
       name: 'Microsoft',
@@ -32,7 +33,7 @@ const TrustedCompanies: React.FC = () => {
     },
     {
       name: 'ShipBob',
-      logo: 'https://images.crunchbase.com/image/upload/c_lpad,h_256,w_256,f_auto,q_auto:eco,dpr_1/v1397184179/b0b4c1e6c3e3f6c9e0f3c7e1e7e3e3e3.png',
+      logo: shipbobLogo,
     },
     {
       name: 'Slack',
@@ -49,7 +50,7 @@ const TrustedCompanies: React.FC = () => {
       <div className=" mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center mb-12">
-          <h2 className="max-w-7xl font-semibold mx-auto text-[20px] md:text-[20px] text-gray-900 mb-4 whitespace-pre-line">
+          <h2 className="max-w-7xl  mx-auto text-[20px] md:text-[22px] text-primary mb-4 whitespace-pre-line">
             {t('trustedCompanies.trustedBy')} <span className="font-bold text-secondary text-3xl">{t('trustedCompanies.25_plus')}</span> {t('trustedCompanies.companies')}
           </h2>
         </div>
@@ -82,7 +83,7 @@ const TrustedCompanies: React.FC = () => {
         {/* Feature Cards Section */}
         <div className="max-w-6xl mx-auto mt-8">
           {/* Description */}
-          <p className="text-left text-gray-800  text-base md:text-2xl mb-12 ">
+          <p className="text-left   text-base md:text-2xl mb-12 ">
             {t('trustedCompanies.description')}
           </p>
 
@@ -96,7 +97,7 @@ const TrustedCompanies: React.FC = () => {
                 <img src={sitting_reading_chair_img} alt="" />
                 </div>
               </div>
-              <h3 className="text-lg font-bold text-gray-900 mb-3">
+              <h3 className="text-xl font-semibold text-primary mb-3">
                 {t('trustedCompanies.features.noOversight.title')}
               </h3>
               <p className="text-sm  leading-relaxed">
@@ -112,7 +113,7 @@ const TrustedCompanies: React.FC = () => {
                 <img src={sitting_reading_img} alt="" />
                 </div>
               </div>
-              <h3 className="text-lg font-bold text-gray-900 mb-3">
+              <h3 className="text-xl font-semibold text-primary mb-3">
                 {t('trustedCompanies.features.disconnected.title')}
               </h3>
               <p className="text-sm  leading-relaxed">
@@ -128,10 +129,10 @@ const TrustedCompanies: React.FC = () => {
                   <img src={yogaImg} alt="" />
                 </div>
               </div>
-              <h3 className="text-lg font-bold text-gray-900 mb-3">
+              <h3 className="text-xl font-semibold text-primary mb-3">
                 {t('trustedCompanies.features.inconsistent.title')}
               </h3>
-              <p className="text-sm  leading-relaxed">
+              <p className="text-sm text-primary leading-relaxed">
                 {t('trustedCompanies.features.inconsistent.description')}
               </p>
             </div>

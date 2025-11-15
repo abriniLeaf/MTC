@@ -22,13 +22,13 @@ const ApproachCard = React.forwardRef<HTMLDivElement, ApproachCardProps>(
         {...props}
       >
         <div
-          className="relative block w-full h-full rounded-2xl overflow-hidden shadow-md 
-                     transition-all duration-500 ease-in-out 
+          className="relative block w-full h-full rounded-2xl overflow-hidden shadow-md
+                     transition-all duration-500 ease-in-out
                      group-hover:scale-[1.02] group-hover:shadow-xl"
         >
           {/* Background Image */}
           <div
-            className="absolute inset-0 bg-cover bg-center 
+            className="absolute inset-0 bg-cover bg-center
                        transition-transform duration-500 ease-in-out group-hover:scale-105"
             style={{ backgroundImage: `url(${imageUrl})` }}
           />
@@ -40,13 +40,13 @@ const ApproachCard = React.forwardRef<HTMLDivElement, ApproachCardProps>(
               background: `linear-gradient(to top, hsl(var(--theme-color) / 0.95), hsl(var(--theme-color) / 0.7) 40%, transparent 70%)`,
             }}
           />
-          
+
           {/* Content */}
           <div className="relative flex flex-col justify-end h-full p-6 text-white">
-            <h3 className="text-xl font-bold tracking-tight mb-2">
+            <h3 className="text-2xl font-bold tracking-tight mb-2">
               {title}
             </h3>
-            <p className="text-sm text-white/90 leading-relaxed font-light">
+            <p className="text-lg text-white/90 leading-relaxed font-light">
               {description}
             </p>
           </div>

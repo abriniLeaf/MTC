@@ -2,11 +2,11 @@ import { useLanguage } from "@/context/LanguageContext";
 import translations from "@/locales/translations.json";
 
 // Service images - using existing assets as placeholders
-import outsourcingImg from '../assets/group_talk.png';
-import softwareImg from '../assets/solo_talk.png';
-import uiuxImg from '../assets/sitting-and-reading_char.png';
-import qaImg from '../assets/beautiful-city-view 1.png';
-import consultingImg from '../assets/centralizedVisibility.png';
+import outsourcingImg from '../assets/service_offering/outsourcing.jpg';
+import softwareImg from '../assets/service_offering/tailoring.jpg';
+import uiuxImg from '../assets/service_offering/professinal.jpg';
+import qaImg from '../assets/service_offering/qa.png';
+// import consultingImg from '../assets/service_offering/consulting.jpg';
 import { ApproachCard } from "@/components/ui/unique-approach";
 
 const ServiceOfferings = () => {
@@ -46,14 +46,14 @@ const ServiceOfferings = () => {
       image: qaImg,
       imageAlt: 'Quality Assurance Services'
     },
-    {
-      id: 'businessConsulting',
-      title: t.businessConsulting.title[language as 'en' | 'ar'],
-      description: t.businessConsulting.description[language as 'en' | 'ar'],
-      features: t.businessConsulting.features,
-      image: consultingImg,
-      imageAlt: 'Business Consulting Services'
-    }
+    // {
+    //   id: 'businessConsulting',
+    //   title: t.businessConsulting.title[language as 'en' | 'ar'],
+    //   description: t.businessConsulting.description[language as 'en' | 'ar'],
+    //   features: t.businessConsulting.features,
+    //   image: consultingImg,
+    //   imageAlt: 'Business Consulting Services'
+    // }
   ];
 
   return (
@@ -61,10 +61,10 @@ const ServiceOfferings = () => {
       <div className="max-w-7xl mx-auto">
         {/* Section Header */}
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-7xl font-extrabold text-gray-900 mb-6">
+          <h2 className="text-4xl md:text-6xl font-extrabold text-primary mb-6">
             {t.title[language as 'en' | 'ar']}
           </h2>
-          <p className="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
+          <p className="text-xl text-primary max-w-4xl mx-auto leading-relaxed">
             {t.subtitle[language as 'en' | 'ar']}
           </p>
         </div>

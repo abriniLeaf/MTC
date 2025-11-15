@@ -36,7 +36,7 @@
   "hero": {
     "where_tecnology": {
       "en": "Where Technology ",
-      "ar": "التي"
+      "ar": "حيث التكنولوجيا"
     },
     "meets_strategy": {
       "en": "Meets Strategy",
@@ -247,7 +247,7 @@
       "ar": "الرئيسية"
     },
     "serviceOfferings": {
-      "en": "Service Offwerings",
+      "en": "Service Offerings",
       "ar": "عروض الخدمات"
     },
     "ourPlans": {
@@ -302,7 +302,7 @@
         "ar": "رؤية مركزية"
       },
       "description": {
-        "en": "Gain complete oversight of your operations with unified dashboards that bring all critical data into one accessible platform.",
+        "en": "Unify data and tasks across teams for better decision-making and real-time oversight.",
         "ar": "احصل على إشراف كامل على عملياتك من خلال لوحات معلومات موحدة تجمع جميع البيانات الحيوية في منصة واحدة يسهل الوصول إليها."
       }
     },
@@ -312,7 +312,7 @@
         "ar": "إدارة المواهب القابلة للتوسع"
       },
       "description": {
-        "en": "Empower your workforce with intelligent tools that adapt to your growth, ensuring seamless talent acquisition and development.",
+        "en": "Seamlessly assign, onboard, and manage outsourced teams from anywhere. ",
         "ar": "قم بتمكين قوتك العاملة بأدوات ذكية تتكيف مع نموك، مما يضمن اكتساب وتطوير المواهب بسلاسة."
       }
     },
@@ -322,7 +322,7 @@
         "ar": "سير عمل متوافق"
       },
       "description": {
-        "en": "Synchronize teams and processes with automated workflows that eliminate bottlenecks and drive consistent results.",
+        "en": "Build structured processes that connect vendors, clients, and staff into one smart system.",
         "ar": "قم بمزامنة الفرق والعمليات من خلال سير عمل آلي يزيل الاختناقات ويحقق نتائج متسقة."
       }
     }
@@ -780,35 +780,6 @@
         }
       },
       {
-        "id": "professional",
-        "title": {
-          "en": "Professional",
-          "ar": "المحترف"
-        },
-        "description": {
-          "en": "Best suited for ongoing mid-size projects",
-          "ar": "الأنسب للمشاريع المتوسطة الحجم المستمرة"
-        },
-        "features": [
-          {
-            "en": "Up to 5 team members",
-            "ar": "ما يصل إلى 5 أعضاء فريق"
-          },
-          {
-            "en": "Access to a shared workspace",
-            "ar": "الوصول إلى مساحة عمل مشتركة"
-          },
-          {
-            "en": "Project progress tracking",
-            "ar": "تتبع تقدم المشروع"
-          }
-        ],
-        "button": {
-          "en": "Select",
-          "ar": "اختر"
-        }
-      },
-      {
         "id": "enterprise",
         "title": {
           "en": "Enterprise",
@@ -842,31 +813,27 @@
         }
       },
       {
-        "id": "enterprise",
+        "id": "custom",
         "title": {
-          "en": "Enterprise",
-          "ar": "المؤسسة"
+          "en": "Custom",
+          "ar": "المخصصة"
         },
         "description": {
-          "en": "For high-scale or custom enterprise needs",
-          "ar": "للاحتياجات المؤسسية الكبيرة أو المخصصة"
+          "en": "Build your own package based on unique goals, team size, and timeline.",
+          "ar": "بناء حزمة خاصة بناءً على الأهداف الفريدة، حجم الفريق، وجدول الزمن"
         },
         "features": [
           {
-            "en": "Dedicated team",
-            "ar": "فريق مخصص"
+            "en": "Choose your preferred services",
+            "ar": "اختر الخدمات المفضلة"
           },
           {
-            "en": "Daily status updates",
-            "ar": "تحديثات الحالة اليومية"
+            "en": "Set budget & delivery expectations",
+            "ar": "حدد الميزانية والوقت المتوقع للتسليم"
           },
           {
-            "en": "SLA & performance reporting",
-            "ar": "تقارير اتفاقية مستوى الخدمة والأداء"
-          },
-          {
-            "en": "Strategic account manager",
-            "ar": "مدير حساب استراتيجي"
+            "en": "Flexible resources and timelines",
+            "ar": "موارد وجدول زمني مرن"
           }
         ],
         "button": {
@@ -1488,6 +1455,16 @@
         "en": "<h2>1. Acceptance of Terms</h2><p>By accessing and using MTC platform, you accept and agree to be bound by the terms and provisions of this agreement. If you do not agree to these terms, please do not use our services.</p><h2>2. Use of Services</h2><p>You agree to use our services only for lawful purposes and in accordance with these terms. You are responsible for maintaining the confidentiality of your account credentials and for all activities that occur under your account.</p><h2>3. Intellectual Property</h2><p>All content, features, and functionality of our services are owned by MTC and are protected by international copyright, trademark, and other intellectual property laws. You may not reproduce, distribute, or create derivative works without our express written permission.</p><h2>4. Limitation of Liability</h2><p>MTC shall not be liable for any indirect, incidental, special, consequential, or punitive damages resulting from your use or inability to use our services. Our total liability shall not exceed the amount paid by you for our services.</p><h2>5. Modifications</h2><p>We reserve the right to modify these terms at any time. We will notify you of any changes by posting the new terms on our website. Your continued use of our services after such modifications constitutes your acceptance of the updated terms.</p>",
         "ar": "<h2>1. قبول الشروط</h2><p>من خلال الوصول إلى منصة MTC واستخدامها، فإنك تقبل وتوافق على الالتزام بشروط وأحكام هذه الاتفاقية. إذا كنت لا توافق على هذه الشروط، يرجى عدم استخدام خدماتنا.</p><h2>2. استخدام الخدمات</h2><p>توافق على استخدام خدماتنا فقط للأغراض القانونية ووفقًا لهذه الشروط. أنت مسؤول عن الحفاظ على سرية بيانات اعتماد حسابك وعن جميع الأنشطة التي تحدث تحت حسابك.</p><h2>3. الملكية الفكرية</h2><p>جميع المحتويات والميزات والوظائف الخاصة بخدماتنا مملوكة لـ MTC ومحمية بموجب قوانين حقوق النشر والعلامات التجارية وغيرها من قوانين الملكية الفكرية الدولية. لا يجوز لك إعادة إنتاج أو توزيع أو إنشاء أعمال مشتقة دون إذن كتابي صريح منا.</p><h2>4. تحديد المسؤولية</h2><p>لن تكون MTC مسؤولة عن أي أضرار غير مباشرة أو عرضية أو خاصة أو تبعية أو عقابية ناتجة عن استخدامك أو عدم قدرتك على استخدام خدماتنا. لن تتجاوز مسؤوليتنا الإجمالية المبلغ الذي دفعته مقابل خدماتنا.</p><h2>5. التعديلات</h2><p>نحتفظ بالحق في تعديل هذه الشروط في أي وقت. سنخطرك بأي تغييرات من خلال نشر الشروط الجديدة على موقعنا. يشكل استمرارك في استخدام خدماتنا بعد هذه التعديلات قبولك للشروط المحدثة.</p>"
       }
+    }
+  },
+  "authDropdown": {
+    "login": {
+      "en": "Login",
+      "ar": "تسجيل الدخول"
+    },
+    "signUp": {
+      "en": "Sign Up",
+      "ar": "إنشاء حساب"
     }
   }
 }

@@ -50,10 +50,10 @@ const OurPlans = () => {
       <div className="max-w-7xl mx-auto px-4 md:px-8 lg:px-16 relative z-10">
         {/* Section Header */}
         <div className="text-center mb-12">
-          <h2 className="text-4xl md:text-7xl font-extrabold text-gray-900 mb-4">
+          <h2 className="text-4xl md:text-6xl font-extrabold text-primary mb-4">
             {t.title[language as 'en' | 'ar']}
           </h2>
-          <p className="text-base md:text-2xl  max-w-4xl mx-auto leading-relaxed">
+          <p className="text-base md:text-xl  max-w-4xl mx-auto leading-relaxed">
             {t.subtitle[language as 'en' | 'ar']}
           </p>
         </div>

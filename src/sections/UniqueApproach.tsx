@@ -15,10 +15,10 @@ const UniqueApproach = () => {
       <div className="max-w-7xl mx-auto">
         {/* Section Header */}
         <div className="mb-12 flex flex-col lg:flex-row lg:justify-between lg:items-end gap-4 lg:gap-6">
-          <h2 className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-extrabold text-gray-900 lg:flex-1 lg:mr-6 xl:mr-10">
+          <h2 className="text-4xl md:text-5xl lg:text-6xl xl:text-6xl xl:whitespace-pre  font-extrabold text-primary lg:flex-1 lg:mr-6 xl:mr-10">
             {t.title[language as 'en' | 'ar']}
           </h2>
-          <p className="text-lg md:text-xl lg:text-xl xl:text-2xl max-w-2xl lg:flex-shrink-0 text-gray-600">
+          <p className="text-lg md:text-xl lg:text-xl xl:text-xl max-w-2xl lg:flex-shrink-0 text-primary">
             {t.subtitle[language as 'en' | 'ar']}
           </p>
         </div>

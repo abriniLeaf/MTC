@@ -2,12 +2,11 @@ import { useState, useEffect, useRef } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Eye, EyeOff } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
-import { useLanguage } from '../context/LanguageContext';
+import LanguageSwitcher from '../components/LanguageSwitcher';
 
 const LoginPage = () => {
   const navigate = useNavigate();
   const { t } = useTranslation();
-  const { language, toggleLanguage } = useLanguage();
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [rememberMe, setRememberMe] = useState(false);
@@ -95,6 +94,10 @@ const LoginPage = () => {
     setConfirmNewPassword('');
   };
 
+  const redirect = (path: string) => {
+    navigate(path);
+  };
+
   // Timer countdown for OTP
   useEffect(() => {
     if (step === 'verify' && timer > 0) {
@@ -167,15 +170,7 @@ const LoginPage = () => {
 
           {/* Language Switcher */}
           <div className="absolute top-4 sm:top-6 lg:top-9 end-4 sm:end-6 lg:end-8">
-            <button
-              onClick={toggleLanguage}
-              className="flex items-center gap-2 px-3 py-2 rounded-lg bg-gray-100 hover:bg-gray-200 transition-colors duration-200"
-              aria-label="Toggle Language"
-            >
-              <span className="text-sm font-medium text-gray-700">
-                {language === 'en' ? 'العربية' : 'English'}
-              </span>
-            </button>
+            <LanguageSwitcher />
           </div>
 
           {/* Welcome Text */}
@@ -268,6 +263,7 @@ const LoginPage = () => {
             {/* Login Button */}
             <button
               type="submit"
+              onClick={() => redirect('/')}
               className="w-full mt-4 sm:mt-7 bg-secondary text-white py-2.5 sm:py-3 text-sm sm:text-base rounded-full font-semibold hover:bg-primary-800 transition-colors duration-200"
             >
               {t('login.loginButton')}
