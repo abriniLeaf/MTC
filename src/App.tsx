@@ -2,12 +2,13 @@ import { useEffect } from 'react'
 import { useLocation } from 'react-router-dom'
 import Header from './components/Header'
 import Footer from './components/Footer'
+import CookieConsent from './components/CookieConsent'
 import Hero from './sections/Hero'
 import TrustedCompanies from './sections/TrustedCompanies'
 
 import AboutMTC from './sections/AboutMTC'
 // import Services from './sections/Services'
-import Contact from './sections/Contact'
+// import Contact from './sections/Contact'
 import UniqueApproach from './sections/UniqueApproach'
 import ServiceOfferings from './sections/ServiceOfferings'
 import DesignedForAll from './sections/DesignedForAll'
@@ -56,6 +57,7 @@ function App() {
         <OurPlans/>
       </main>
       <Footer />
+      <CookieConsent />
     </div>
   )
 }

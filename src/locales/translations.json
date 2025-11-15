@@ -1466,5 +1466,35 @@
       "en": "Sign Up",
       "ar": "إنشاء حساب"
     }
+  },
+  "cookieConsent": {
+    "title": {
+      "en": "We Value Your Privacy",
+      "ar": "نحن نقدر خصوصيتك"
+    },
+    "description": {
+      "en": "We use cookies to enhance your browsing experience, serve personalized content, and analyze our traffic. By clicking 'Accept All', you consent to our use of cookies. You can manage your preferences or learn more in our",
+      "ar": "نستخدم ملفات تعريف الارتباط لتحسين تجربة التصفح الخاصة بك، وتقديم محتوى مخصص، وتحليل حركة المرور لدينا. بالنقر على 'قبول الكل'، فإنك توافق على استخدامنا لملفات تعريف الارتباط. يمكنك إدارة تفضيلاتك أو معرفة المزيد في"
+    },
+    "accept": {
+      "en": "Accept All",
+      "ar": "قبول الكل"
+    },
+    "reject": {
+      "en": "Reject All",
+      "ar": "رفض الكل"
+    },
+    "privacyPolicy": {
+      "en": "Privacy Policy",
+      "ar": "سياسة الخصوصية"
+    },
+    "cookiePolicy": {
+      "en": "Cookie Policy",
+      "ar": "سياسة ملفات تعريف الارتباط"
+    },
+    "and": {
+      "en": "and",
+      "ar": "و"
+    }
   }
 }
