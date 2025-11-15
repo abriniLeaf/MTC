@@ -17,6 +17,19 @@
   --color-secondary: #083859;
 }
 
+/* Smooth Scrolling */
+* {
+  scroll-behavior: smooth;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  scroll-behavior: smooth;
+}
+
 /* Fade In Animation */
 @keyframes fadeIn {
   from {

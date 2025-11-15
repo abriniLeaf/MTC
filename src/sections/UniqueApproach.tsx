@@ -1,6 +1,7 @@
 import { ApproachCard } from "@/components/ui/unique-approach";
 import { useLanguage } from "@/context/LanguageContext";
 import translations from "@/locales/translations.json";
+import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 
 import centralizedVisibility from '../assets/centralizedVisibility.png'
 import scalableTalent from '../assets/scalableTalent.png'
@@ -9,12 +10,15 @@ import alignedWorkflows from '../assets/alignedWorkflows.png'
 const UniqueApproach = () => {
   const { language } = useLanguage();
   const t = translations.uniqueApproach;
+  const { isVisible, elementRef } = useScrollAnimation();
 
   return (
-    <section className="py-16 mt-15 px-4 md:px-8 lg:px-16 bg-white">
+    <section ref={elementRef as React.RefObject<HTMLElement>} className="py-16 mt-15 px-4 md:px-8 lg:px-16 bg-white">
       <div className="max-w-7xl mx-auto">
         {/* Section Header */}
-        <div className="mb-12 flex flex-col lg:flex-row lg:justify-between lg:items-end gap-4 lg:gap-6">
+        <div className={`mb-12 flex flex-col lg:flex-row lg:justify-between lg:items-end gap-4 lg:gap-6 transition-all duration-1000 ease-out ${
+          isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+        }`}>
           <h2 className="text-4xl md:text-5xl lg:text-6xl xl:text-6xl xl:whitespace-pre  font-extrabold text-primary lg:flex-1 lg:mr-6 xl:mr-10">
             {t.title[language as 'en' | 'ar']}
           </h2>
@@ -24,7 +28,9 @@ const UniqueApproach = () => {
         </div>
 
         {/* Cards Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8">
+        <div className={`grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8 transition-all duration-1000 ease-out delay-300 ${
+          isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+        }`}>
           {/* Card 1: Centralized Visibility */}
           <div className="h-[500px] ">
             <ApproachCard

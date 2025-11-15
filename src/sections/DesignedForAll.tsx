@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { useLanguage } from "@/context/LanguageContext";
 import translations from "@/locales/translations.json";
+import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 
 import clientsImg from '../assets/client.png';
 import vendorsImg from '../assets/vendoor.png';
@@ -21,6 +22,7 @@ const DesignedForAll = () => {
   const t = translations.designedForAll;
   const [selectedStakeholder, setSelectedStakeholder] = useState<string | null>('clients');
   const [hoveredStakeholder, setHoveredStakeholder] = useState<string | null>(null);
+  const { isVisible, elementRef } = useScrollAnimation();
 
   const stakeholders = [
     {
@@ -55,10 +57,12 @@ const DesignedForAll = () => {
   const selectedData = stakeholders.find(s => s.id === selectedStakeholder);
 
   return (
-    <section className="py-20 px-4 md:px-8 lg:px-16">
+    <section ref={elementRef as React.RefObject<HTMLElement>} className="py-20 px-4 md:px-8 lg:px-16">
       <div className="max-w-7xl mx-auto">
         {/* Section Header */}
-        <div className="text-center mb-7">
+        <div className={`text-center mb-7 transition-all duration-1000 ease-out ${
+          isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+        }`}>
           <h2 className="text-4xl md:text-6xl font-extrabold text-primary mb-6">
             {t.title[language as 'en' | 'ar']}
           </h2>
@@ -68,7 +72,9 @@ const DesignedForAll = () => {
         </div>
 
         {/* Stakeholder Cards */}
-        <div className="grid grid-cols-3 gap-3 md:gap-6 max-w-4xl mx-auto mb-12">
+        <div className={`grid grid-cols-3 gap-3 md:gap-6 max-w-4xl mx-auto mb-12 transition-all duration-1000 ease-out delay-200 ${
+          isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+        }`}>
           {stakeholders.map((stakeholder) => (
             <div
               key={stakeholder.id}
@@ -107,7 +113,9 @@ const DesignedForAll = () => {
 
         {/* Detailed Card - Full Width */}
         {selectedData && (
-          <div className="w-full bg-white rounded-3xl border-2 border-gray-200 overflow-hidden animate-fadeIn">
+          <div className={`w-full bg-white rounded-3xl border-2 border-gray-200 overflow-hidden animate-fadeIn transition-all duration-1000 ease-out delay-400 ${
+            isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+          }`}>
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-0">
               {/* Left Side - Steps */}
               <div className={`p-8 md:p-8 ml-2 ${language === 'ar' ? 'lg:order-2' : ''}`}>

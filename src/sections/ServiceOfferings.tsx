@@ -1,5 +1,6 @@
 import { useLanguage } from "@/context/LanguageContext";
 import translations from "@/locales/translations.json";
+import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 
 // Service images - using existing assets as placeholders
 import outsourcingImg from '../assets/service_offering/outsourcing.jpg';
@@ -12,6 +13,7 @@ import { ApproachCard } from "@/components/ui/unique-approach";
 const ServiceOfferings = () => {
   const { language } = useLanguage();
   const t = translations.serviceOfferings;
+  const { isVisible, elementRef } = useScrollAnimation();
 
   const services = [
     {
@@ -57,10 +59,12 @@ const ServiceOfferings = () => {
   ];
 
   return (
-    <section  id="services" className="py-20 px-4 md:px-8 lg:px-16 ">
+    <section ref={elementRef as React.RefObject<HTMLElement>} id="services" className="py-20 px-4 md:px-8 lg:px-16 ">
       <div className="max-w-7xl mx-auto">
         {/* Section Header */}
-        <div className="text-center mb-16">
+        <div className={`text-center mb-16 transition-all duration-1000 ease-out ${
+          isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+        }`}>
           <h2 className="text-4xl md:text-6xl font-extrabold text-primary mb-6">
             {t.title[language as 'en' | 'ar']}
           </h2>
@@ -70,7 +74,9 @@ const ServiceOfferings = () => {
         </div>
 
         {/* Services List */}
-        <div className="space-y-10">
+        <div className={`space-y-10 transition-all duration-1000 ease-out delay-300 ${
+          isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+        }`}>
           {services.map((service, index) => {
             // Determine layout based on index and language
             const isEvenIndex = index % 2 === 0;

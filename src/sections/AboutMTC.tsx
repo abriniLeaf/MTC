@@ -1,17 +1,21 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
 import { useLanguage } from '../context/LanguageContext';
+import { useScrollAnimation } from '@/hooks/useScrollAnimation';
 import vision_img from '../assets/about_mtc/vision.jpg';
 import mission_img from '../assets/about_mtc/mission.jpg';
 
 const AboutMTC: React.FC = () => {
   const { t } = useTranslation();
   const { isRTL } = useLanguage();
+  const { isVisible, elementRef } = useScrollAnimation();
   return (
-    <section id="about" className="py-16 bg-primary">
+    <section ref={elementRef as React.RefObject<HTMLElement>} id="about" className="py-16 bg-primary">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
-        <div className="mb-0 md:mb-20 flex md:flex-row flex-col justify-between md:gap-19 gap-5 align-bottom items-end">
+        <div className={`mb-0 md:mb-20 flex md:flex-row flex-col justify-between md:gap-19 gap-5 align-bottom items-end transition-all duration-1000 ease-out ${
+          isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+        }`}>
             <div>
           <h2 className="text-4xl md:text-6xl font-extrabold text-white mb-6">
             {t('aboutMTC.title')}
@@ -51,7 +55,9 @@ const AboutMTC: React.FC = () => {
         </div>
 
         {/* Vision and Mission Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-[0.8fr_1fr_1fr] gap-8 mt-12 md:divide-x md:divide-white/20">
+        <div className={`grid grid-cols-1 md:grid-cols-[0.8fr_1fr_1fr] gap-8 mt-12 md:divide-x md:divide-white/20 transition-all duration-1000 ease-out delay-300 ${
+          isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+        }`}>
   {/* First Small Card */}
   <div className="bg-transparent pr-0 md:pr-8">
 

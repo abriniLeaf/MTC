@@ -1,6 +1,7 @@
 import { useLanguage } from "@/context/LanguageContext";
 import translations from "@/locales/translations.json";
 import { useRef, useState } from "react";
+import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 import lastBackground from "@/assets/our_plan_bg.png";
 import PlanCard from "@/components/PlanCard";
 
@@ -11,6 +12,7 @@ const OurPlans = () => {
   const [isDragging, setIsDragging] = useState(false);
   const [startX, setStartX] = useState(0);
   const [scrollLeft, setScrollLeft] = useState(0);
+  const { isVisible, elementRef } = useScrollAnimation();
 
   const handleMouseDown = (e: React.MouseEvent) => {
     if (!scrollContainerRef.current) return;
@@ -38,7 +40,7 @@ const OurPlans = () => {
   const plans = t.plans;
 
   return (
-    <section id="plans"
+    <section ref={elementRef as React.RefObject<HTMLElement>} id="plans"
       className="py-20 pt-10 bg-gray-50 relative"
       style={{
         backgroundImage: `url(${lastBackground})`,
@@ -49,7 +51,9 @@ const OurPlans = () => {
     >
       <div className="max-w-7xl mx-auto px-4 md:px-8 lg:px-16 relative z-10">
         {/* Section Header */}
-        <div className="text-center mb-12">
+        <div className={`text-center mb-12 transition-all duration-1000 ease-out ${
+          isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+        }`}>
           <h2 className="text-4xl md:text-6xl font-extrabold text-primary mb-4">
             {t.title[language as 'en' | 'ar']}
           </h2>
@@ -62,7 +66,9 @@ const OurPlans = () => {
       {/* Full Width Scrollable Container */}
       <div
         ref={scrollContainerRef}
-        className={`w-full overflow-x-scroll scrollbar-hide ${isDragging ? 'cursor-grabbing' : 'cursor-grab'}`}
+        className={`w-full overflow-x-scroll scrollbar-hide ${isDragging ? 'cursor-grabbing' : 'cursor-grab'} transition-all duration-1000 ease-out delay-300 ${
+          isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+        }`}
         onMouseDown={handleMouseDown}
         onMouseMove={handleMouseMove}
         onMouseUp={handleMouseUp}

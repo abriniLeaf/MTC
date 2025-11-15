@@ -1,6 +1,7 @@
 import React from 'react';
 import { InfiniteSlider } from '@/components/ui/infinite-slider';
 import { useTranslation } from 'react-i18next';
+import { useScrollAnimation } from '@/hooks/useScrollAnimation';
 import yogaImg from '../assets/yoga.png';
 import sitting_reading_img from '../assets/open-doodles-sitting-and-reading 1 (1).png';
 import sitting_reading_chair_img from '../assets/sitting-and-reading_char.png';
@@ -8,6 +9,7 @@ import shipbobLogo from '../assets/compaines/shipbob.png';
 import abode_img from '../assets/compaines/adobe.png'
 const TrustedCompanies: React.FC = () => {
   const { t } = useTranslation();
+  const { isVisible, elementRef } = useScrollAnimation();
 
   // Company logos - using well-known tech company logos
   const companies = [
@@ -46,17 +48,21 @@ const TrustedCompanies: React.FC = () => {
   ];
 
   return (
-    <section className="py-16 bg-transparent">
+    <section ref={elementRef as React.RefObject<HTMLElement>} className="py-16 bg-transparent">
       <div className=" mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
-        <div className="text-center mb-12">
+        <div className={`text-center mb-12 transition-all duration-1000 ease-out ${
+          isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+        }`}>
           <h2 className="max-w-7xl  mx-auto text-[20px] md:text-[22px] text-primary mb-4 whitespace-pre-line">
             {t('trustedCompanies.trustedBy')} <span className="font-bold text-secondary text-3xl">{t('trustedCompanies.25_plus')}</span> {t('trustedCompanies.companies')}
           </h2>
         </div>
 
         {/* Infinite Slider with Gradient Fade Effect */}
-        <div className="relative">
+        <div className={`relative transition-all duration-1000 ease-out delay-200 ${
+          isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+        }`}>
           {/* Left Gradient Fade */}
           <div className="absolute left-0 top-0 bottom-0 w-32 md:w-48 bg-gradient-to-r from-white/90 via-white/50 to-transparent z-10 pointer-events-none"></div>
 
@@ -81,7 +87,9 @@ const TrustedCompanies: React.FC = () => {
         </div>
 
         {/* Feature Cards Section */}
-        <div className="max-w-6xl mx-auto mt-8">
+        <div className={`max-w-6xl mx-auto mt-8 transition-all duration-1000 ease-out delay-400 ${
+          isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+        }`}>
           {/* Description */}
           <p className="text-left   text-base md:text-2xl mb-12 ">
             {t('trustedCompanies.description')}

@@ -1,6 +1,7 @@
 import { useLanguage } from "@/context/LanguageContext";
 import translations from "@/locales/translations.json";
 import whyChooseUpImage from "@/assets/whychooseup.svg";
+import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 
 import MonitorIcon from "../assets/why_choose_our/4.png";
 import PlatformIcon from "../assets/why_choose_our/2.png";
@@ -12,6 +13,7 @@ import QualityIcon from "../assets/why_choose_our/1.png";
 const WhyChooseOurPlatform = () => {
   const { language } = useLanguage();
   const t = translations.whyChooseOurPlatform;
+  const { isVisible, elementRef } = useScrollAnimation();
 
   // Icon components
 
@@ -68,10 +70,12 @@ const WhyChooseOurPlatform = () => {
   ];
 
   return (
-    <section className="py-20 px-4 md:px-8 lg:px-16 ">
+    <section ref={elementRef as React.RefObject<HTMLElement>} className="py-20 px-4 md:px-8 lg:px-16 ">
       <div className="max-w-7xl mx-auto">
         {/* Section Header */}
-        <div className="text-left mb-16">
+        <div className={`text-left mb-16 transition-all duration-1000 ease-out ${
+          isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+        }`}>
           <h2 className="text-4xl md:text-6xl font-extrabold text-primary mb-6">
             {t.title[language as 'en' | 'ar']}
           </h2>
@@ -81,7 +85,9 @@ const WhyChooseOurPlatform = () => {
         </div>
 
         {/* Features Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className={`grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 transition-all duration-1000 ease-out delay-300 ${
+          isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+        }`}>
           {features.map((feature) => (
             <div
               key={feature.id}
@@ -107,7 +113,9 @@ const WhyChooseOurPlatform = () => {
       </div>
 
       {/* Get Started Section */}
-      <div className="max-w-7xl mx-auto mt-20">
+      <div className={`max-w-7xl mx-auto mt-20 transition-all duration-1000 ease-out delay-500 ${
+        isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+      }`}>
         <div className="bg-primary rounded-3xl p-12 md:p-16 flex flex-col md:flex-row items-center justify-between gap-8">
           {/* Left Content */}
           <div className="flex-1 text-white">
