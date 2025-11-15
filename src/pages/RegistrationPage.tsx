@@ -5,11 +5,13 @@ import translations from '@/locales/translations.json';
 import PlanCard from '@/components/PlanCard';
 import whyChooseUpImage from "@/assets/last_step_img.png";
 import LanguageSwitcher from '../components/LanguageSwitcher';
+import { motion, AnimatePresence } from 'framer-motion';
 
 const RegistrationPage = () => {
   const navigate = useNavigate();
   const { language } = useLanguage();
   const [currentStep, setCurrentStep] = useState(1);
+  const [direction, setDirection] = useState(0); // 1 for forward, -1 for backward
   const totalSteps = 4;
 
   // Form state
@@ -31,6 +33,7 @@ const RegistrationPage = () => {
   const reg = translations.registration;
 
   const handleNext = () => {
+    setDirection(1);
     if (currentStep < totalSteps) {
       setCurrentStep(currentStep + 1);
     } else {
@@ -40,6 +43,7 @@ const RegistrationPage = () => {
   };
 
   const handleBack = () => {
+    setDirection(-1);
     if (currentStep > 1) {
       setCurrentStep(currentStep - 1);
     }
@@ -127,19 +131,58 @@ const RegistrationPage = () => {
     </div>
   );
 
+  // Animation variants for step transitions
+  const stepVariants = {
+    enter: (direction: number) => ({
+      x: direction > 0 ? 300 : -300,
+      opacity: 0,
+      scale: 0.95
+    }),
+    center: {
+      x: 0,
+      opacity: 1,
+      scale: 1
+    },
+    exit: (direction: number) => ({
+      x: direction > 0 ? -300 : 300,
+      opacity: 0,
+      scale: 0.95
+    })
+  };
+
+  const stepTransition = {
+    type: "spring" as const,
+    stiffness: 300,
+    damping: 30
+  };
+
   const renderStep1 = () => (
     <>
-      <div className="text-center mb-8">
+      <motion.div 
+        className="text-center mb-8"
+        initial={{ opacity: 0, y: -20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ delay: 0.1, duration: 0.5 }}
+      >
         <h2 className="text-3xl font-bold text-gray-900 mb-2">
           {reg.step1.title[language as 'en' | 'ar']}
         </h2>
         <p className="text-gray-600">
           {reg.step1.subtitle[language as 'en' | 'ar']}
         </p>
-      </div>
+      </motion.div>
 
-      <div className="space-y-6 max-w-lg mx-auto">
-        <div>
+      <motion.div 
+        className="space-y-6 max-w-lg mx-auto"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ delay: 0.2, duration: 0.5 }}
+      >
+        <motion.div
+          initial={{ opacity: 0, x: -20 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ delay: 0.3, duration: 0.4 }}
+        >
         <label className="block text-sm font-semibold text-secondary mb-2">
           {reg.step1.companyName[language as 'en' | 'ar']}
         </label>
@@ -150,9 +193,13 @@ const RegistrationPage = () => {
           placeholder={reg.step1.companyNamePlaceholder[language as 'en' | 'ar']}
           className="w-full px-4 py-3 border border-gray-300 rounded-full focus:ring-2 focus:ring-[#003366] focus:border-transparent outline-none"
         />
-      </div>
+      </motion.div>
 
-      <div>
+      <motion.div
+        initial={{ opacity: 0, x: -20 }}
+        animate={{ opacity: 1, x: 0 }}
+        transition={{ delay: 0.4, duration: 0.4 }}
+      >
         <label className="block text-sm font-semibold text-secondary mb-2">
           {reg.step1.companySize[language as 'en' | 'ar']}
         </label>
@@ -168,9 +215,13 @@ const RegistrationPage = () => {
           <option value="51-200">51-200 employees</option>
           <option value="201+">201+ employees</option>
         </select>
-      </div>
+      </motion.div>
 
-      <div>
+      <motion.div
+        initial={{ opacity: 0, x: -20 }}
+        animate={{ opacity: 1, x: 0 }}
+        transition={{ delay: 0.5, duration: 0.4 }}
+      >
         <label className="block text-sm font-semibold text-secondary mb-2">
           {reg.step1.department[language as 'en' | 'ar']}
         </label>
@@ -186,9 +237,13 @@ const RegistrationPage = () => {
           <option value="marketing">Marketing</option>
           <option value="sales">Sales</option>
         </select>
-      </div>
+      </motion.div>
 
-      <div>
+      <motion.div
+        initial={{ opacity: 0, x: -20 }}
+        animate={{ opacity: 1, x: 0 }}
+        transition={{ delay: 0.6, duration: 0.4 }}
+      >
         <label className="block text-sm font-semibold text-secondary mb-2">
           {reg.step1.industry[language as 'en' | 'ar']}
         </label>
@@ -204,31 +259,44 @@ const RegistrationPage = () => {
           <option value="healthcare">Healthcare</option>
           <option value="retail">Retail</option>
         </select>
-        </div>
-      </div>
+        </motion.div>
+      </motion.div>
     </>
   );
 
   const renderStep2 = () => (
     <>
-      <div className="text-center mb-8">
+      <motion.div 
+        className="text-center mb-8"
+        initial={{ opacity: 0, y: -20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ delay: 0.1, duration: 0.5 }}
+      >
         <h2 className="text-3xl font-bold text-gray-900 mb-2">
           {reg.step2.title[language as 'en' | 'ar']}
         </h2>
         <p className="text-gray-600">
           {reg.step2.subtitle[language as 'en' | 'ar']}
         </p>
-      </div>
+      </motion.div>
 
-      <div className="space-y-6 max-w-lg mx-auto">
+      <motion.div 
+        className="space-y-6 max-w-lg mx-auto"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ delay: 0.2, duration: 0.5 }}
+      >
         <div className="space-y-3">
         {[
           { key: 'findEmployees', label: reg.step2.findEmployees[language as 'en' | 'ar'] },
           { key: 'browseVendors', label: reg.step2.browseVendors[language as 'en' | 'ar'] },
           { key: 'postProject', label: reg.step2.postProject[language as 'en' | 'ar'] },
           { key: 'exploring', label: reg.step2.exploring[language as 'en' | 'ar'] }
-        ].map((goal) => (
-          <label
+        ].map((goal, index) => (
+          <motion.label
+            initial={{ opacity: 0, x: -20 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ delay: 0.3 + index * 0.1, duration: 0.4 }}
             key={goal.key}
             className="flex bg-white items-center p-4 border-2 border-gray-200 rounded-full cursor-pointer hover:border-[#003366] transition-colors"
           >
@@ -239,10 +307,10 @@ const RegistrationPage = () => {
               className="w-5 h-5 text-[#003366]  border-gray-300 rounded focus:ring-[#003366]"
             />
             <span className="ms-3 text-gray-900">{goal.label}</span>
-          </label>
+          </motion.label>
         ))}
         </div>
-      </div>
+      </motion.div>
     </>
   );
 
@@ -336,19 +404,35 @@ const RegistrationPage = () => {
 
     return (
       <>
-        <div className="text-center mb-8">
+        <motion.div 
+          className="text-center mb-8"
+          initial={{ opacity: 0, y: -20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.1, duration: 0.5 }}
+        >
           <h2 className="text-3xl font-bold text-gray-900 mb-2">
             {reg.step3.title[language as 'en' | 'ar']}
           </h2>
           <p className="text-gray-600">
             {reg.step3.subtitle[language as 'en' | 'ar']}
           </p>
-        </div>
+        </motion.div>
 
-        <div className="space-y-6 max-w-lg mx-auto">
+        <motion.div 
+          className="space-y-6 max-w-lg mx-auto"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 0.2, duration: 0.5 }}
+        >
           <div className="space-y-3">
-          {categories.map((category) => (
-            <div key={category.id} className="border-2 border-gray-200 rounded-xl overflow-hidden">
+          {categories.map((category, index) => (
+            <motion.div 
+              key={category.id} 
+              className="border-2 border-gray-200 rounded-xl overflow-hidden"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.3 + index * 0.05, duration: 0.4 }}
+            >
               <button
                 onClick={() => setExpandedCategory(expandedCategory === category.id ? null : category.id)}
                 className="w-full flex items-center justify-between p-4 bg-white hover:bg-gray-50 transition-colors"
@@ -368,8 +452,15 @@ const RegistrationPage = () => {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                 </svg>
               </button>
+              <AnimatePresence>
               {expandedCategory === category.id && (
-                <div className="p-4 bg-gray-50 space-y-2">
+                <motion.div 
+                  className="p-4 bg-gray-50 space-y-2"
+                  initial={{ height: 0, opacity: 0 }}
+                  animate={{ height: 'auto', opacity: 1 }}
+                  exit={{ height: 0, opacity: 0 }}
+                  transition={{ duration: 0.3 }}
+                >
                   {category.roles.map((role) => (
                     <label
                       key={role.key}
@@ -384,12 +475,13 @@ const RegistrationPage = () => {
                       <span className="ms-3 text-gray-900">{role.label}</span>
                     </label>
                   ))}
-                </div>
+                </motion.div>
               )}
-            </div>
+              </AnimatePresence>
+            </motion.div>
           ))}
           </div>
-        </div>
+        </motion.div>
       </>
     );
   };
@@ -399,16 +491,26 @@ const RegistrationPage = () => {
 
     return (
       <>
-        <div className="text-center mb-8">
+        <motion.div 
+          className="text-center mb-8"
+          initial={{ opacity: 0, y: -20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.1, duration: 0.5 }}
+        >
           <h2 className="text-3xl font-bold text-gray-900 mb-2">
             {reg.step4.title[language as 'en' | 'ar']}
           </h2>
           <p className="text-gray-600">
             {reg.step4.subtitle[language as 'en' | 'ar']}
           </p>
-        </div>
+        </motion.div>
 
-        <div className="space-y-6">
+        <motion.div 
+          className="space-y-6"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 0.2, duration: 0.5 }}
+        >
 
         {/* Horizontal Scrollable Container with Drag - Same as OurPlans */}
         <div
@@ -431,7 +533,7 @@ const RegistrationPage = () => {
             ))}
           </div>
         </div>
-        </div>
+        </motion.div>
       </>
     );
   };
@@ -441,8 +543,12 @@ const RegistrationPage = () => {
 
     return (
       <div className="text-center space-y-6">
-        <div className="mb-8">
-
+        <motion.div 
+          className="mb-8"
+          initial={{ opacity: 0, scale: 0.9 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ delay: 0.1, duration: 0.6, type: "spring" }}
+        >
           <h2 className="text-4xl font-bold text-gray-900 mb-2">
           🎉 {reg.completion.title[language as 'en' | 'ar'].replace('{name}', userName)}
           </h2>
@@ -452,22 +558,32 @@ const RegistrationPage = () => {
           <p className="text-gray-600 max-w-2xl mx-auto">
             {reg.completion.description[language as 'en' | 'ar']}
           </p>
-        </div>
+        </motion.div>
 
-        <div className="flex justify-center my-12">
+        <motion.div 
+          className="flex justify-center my-12"
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.4, duration: 0.6 }}
+        >
           <img
             src={whyChooseUpImage}
             alt="MTC Team"
             className="w-96 h-auto"
         />
-        </div>
+        </motion.div>
 
-        <button
+        <motion.button
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.6, duration: 0.5 }}
+          whileHover={{ scale: 1.05 }}
+          whileTap={{ scale: 0.95 }}
           onClick={() => navigate('/')}
           className="bg-secondary text-white px-8 py-3 rounded-full font-semibold hover:bg-[#002952] transition-colors"
         >
           {reg.completion.backToWebsite[language as 'en' | 'ar']}
-        </button>
+        </motion.button>
       </div>
     );
   };
@@ -496,34 +612,55 @@ const RegistrationPage = () => {
           <div className="w-full flex-grow flex flex-col">
 
           <div className='md:hidden'>{currentStep <= totalSteps && <Stepper />}</div>
-            <div className={`flex-grow ${currentStep === 4 || currentStep === 5 ? '' : 'overflow-y-auto max-h-[60vh]'}`}>
-              {currentStep === 1 && renderStep1()}
-              {currentStep === 2 && renderStep2()}
-              {currentStep === 3 && renderStep3()}
-              {currentStep === 4 && renderStep4()}
-              {currentStep === 5 && renderCompletion()}
+            <div className={`flex-grow overflow-x-hidden ${currentStep === 4 || currentStep === 5 ? '' : 'overflow-y-auto max-h-[60vh]'}`}>
+              <AnimatePresence mode="wait" custom={direction}>
+                <motion.div
+                  key={currentStep}
+                  custom={direction}
+                  variants={stepVariants}
+                  initial="enter"
+                  animate="center"
+                  exit="exit"
+                  transition={stepTransition}
+                >
+                  {currentStep === 1 && renderStep1()}
+                  {currentStep === 2 && renderStep2()}
+                  {currentStep === 3 && renderStep3()}
+                  {currentStep === 4 && renderStep4()}
+                  {currentStep === 5 && renderCompletion()}
+                </motion.div>
+              </AnimatePresence>
             </div>
 
             {/* Navigation Buttons - Fixed at bottom */}
             {currentStep <= totalSteps && (
-              <div className="flex justify-center gap-4 mt-8 pt-6 ">
-                <button
+              <motion.div 
+                className="flex justify-center gap-4 mt-8 pt-6"
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.3, duration: 0.5 }}
+              >
+                <motion.button
                   onClick={currentStep === 1 ? () => navigate('/signup') : handleBack}
                   className="px-10 py-3 lg:px-18 border-2 border-gray-300 text-gray-700 rounded-full font-semibold hover:border-gray-400 transition-colors"
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
                 >
                   {reg.buttons.back[language as 'en' | 'ar']}
-                </button>
-                <button
+                </motion.button>
+                <motion.button
                   onClick={handleNext}
                   className={`px-10 py-3 lg:px-18 rounded-full font-semibold transition-colors ${
                     currentStep === 4
                       ? 'border-2 border-secondary text-secondary hover:bg-secondary hover:text-white'
                       : 'bg-secondary text-white hover:bg-[#002952]'
                   }`}
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
                 >
                   {currentStep === 4 ? reg.buttons.skipForNow[language as 'en' | 'ar'] : reg.buttons.next[language as 'en' | 'ar']}
-                </button>
-              </div>
+                </motion.button>
+              </motion.div>
             )}
           </div>
         </div>
